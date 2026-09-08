@@ -209,7 +209,7 @@ end
 
 --#region [ Flame Shield ] --
 --- Using flame shield to attack a player reduces the maximum gauge by 1/4 for every hit.
---- When the gauge penalty removes all the gauge, flame dashing will not be able to do damage.
+--- When the gauge penalty removes all the gauge, the flame shield will be used up.
 
 ---Maximum amount of gauge the flameshield can have.
 local FLAMESHIELD_MAX = 120
@@ -274,26 +274,21 @@ local function reduceFlameGaugeCap(flameshield)
 end
 
 ---Controls what happens when a player attacks another player.
----@param player player_t
----@param target mobj_t
 ---@param inflictor mobj_t
----@param source mobj_t?
----@param damage integer
----@param damagetype damagetype
-inflictorTypes[MT_PLAYER] = function(player, target, inflictor, source, damage, damagetype)
+inflictorTypes[MT_PLAYER] = function(_, _, inflictor)
 	local attacker = inflictor.player
 	if not isValid(attacker)
 		return end
 
 	if attacker.flamedash and attacker.itemtype == KITEM_FLAMESHIELD
-		---Gauge penalty exceeds the highest possible gauge,
-		---make the flame shield not be able to damage anymore.
-		if attacker.flamelengthreduce > FLAMESHIELD_MAX
-			return false
-		end
-
-		---Count the amount of times this player attacked with a flameshield.
+		---Add to the gauge penalty as the player attacks others with a flame shield.
 		attacker.flamelengthreduce = ($ or 0) + FLAMESHIELD_MAX / FLAMESHOTS_DIV
+
+		---If the gauge penalty ultimate leaves you with no usable gauge,
+		---use up the flame shield.
+		if attacker.flamelengthreduce >= FLAMESHIELD_MAX
+			K_PopPlayerShield(attacker)
+		end
 	end
 end
 --#endregion
