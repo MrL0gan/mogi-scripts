@@ -61,9 +61,9 @@ end
 local function capMomentumByTripwireSpeedThreshold(mobj, player)
 	local speedcap = K_PlayerTripwireSpeedThreshold(player)
 
-	mobj.momx = min(max($, speedcap), speedcap)
-	mobj.momy = min(max($, speedcap), speedcap)
-	mobj.momz = min(max($, speedcap), speedcap)
+	mobj.momx = min(max($, -speedcap), speedcap)
+	mobj.momy = min(max($, -speedcap), speedcap)
+	mobj.momz = min(max($, -speedcap), speedcap)
 end
 
 ---Holds damage modifying functions by object type.
@@ -292,7 +292,7 @@ inflictorTypes[MT_PLAYER] = function(_, _, inflictor)
 		---Add to the gauge penalty as the player attacks others with a flame shield.
 		attacker.flamelengthreduce = ($ or 0) + FLAMESHIELD_MAX / FLAMESHOTS_DIV
 
-		---If the gauge penalty ultimate leaves you with no usable gauge,
+		---If the gauge penalty leaves the player with no usable gauge,
 		---use up the flame shield.
 		if attacker.flamelengthreduce >= FLAMESHIELD_MAX
 			K_PopPlayerShield(attacker)
