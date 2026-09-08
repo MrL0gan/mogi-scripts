@@ -1,7 +1,15 @@
 --- Item Changes for MOGI Lounge
 --- by Yellow/@GlowingTail
 
---#region Helper Functions
+local TOXOMISTERCLOUD_RETURNDELAY = TICRATE / 3
+
+local FLAMESHIELD_MAX = 120
+local FLAMESHOTS_DIV = 4
+local FLAMELENGTH_REGENRATE = TICRATE / 2
+
+---Holds damage modifying functions by object type.
+---@type table<mobjtype_t, fun(player: player_t, target: mobj_t, inflictor: mobj_t, source: mobj_t?, damage: integer, damagetype: damagetype): boolean?>
+local inflictorTypes = {}
 
 ---Validates an userdata.
 ---@param ud userdata
@@ -9,66 +17,6 @@
 local function isValid(ud)
 	return ud and ud.valid
 end
-
----Applies stumble damage to a player that works similarly to a normal damage type.
----@param player player_t
----@param target mobj_t
----@param inflictor mobj_t
----@param source mobj_t?
----@param damage integer
----@param damagetype damagetype
-local function doStumbleDamage(player, target, inflictor, source, damage, damagetype)
-	if not (gametyperules & GTR_CIRCUIT)
-		return end
-
-	---Don't damage a player that is already in pain or have flashtics.
-	if player.flashing and not P_PlayerInPain(player)
-		K_DoInstashield(player)
-		return false
-	end
-
-	---Try to stumble the player.
-	if not P_DamageMobj(target, inflictor, source, damage, DMG_STUMBLE | DMG_WOMBO)
-		return end
-
-	player.flashing = K_GetKartFlashing(player)
-	K_TryHurtSoundExchange(target, source)
-	K_ApplyStun(player, inflictor, source, damage, damagetype)
-
-	---If they have a shield, pop it. Otherwise, lose some rings.
-	if player.curshield
-		K_PopPlayerShield(player)
-	else
-		P_PlayerRingBurst(player, 5)
-		P_PlayRinglossSound(target, player)
-	end
-
-	---Reward amps for the attacker.
-	if isValid(source)
-		local attacker = source.player
-		if isValid(attacker)
-			local amount = K_PvPAmpReward(20, attacker, player)
-			K_SpawnAmps(attacker, amount, target)
-		end
-	end
-
-	return true
-end
-
----Caps the momentum of an object based on the tripwire speed threshold for the target player.
----@param mobj mobj_t
----@param player player_t
-local function capMomentumByTripwireSpeedThreshold(mobj, player)
-	local speedcap = K_PlayerTripwireSpeedThreshold(player)
-
-	mobj.momx = min(max($, -speedcap), speedcap)
-	mobj.momy = min(max($, -speedcap), speedcap)
-	mobj.momz = min(max($, -speedcap), speedcap)
-end
-
----Holds damage modifying functions by object type.
----@type table<mobjtype_t, function>
-local inflictorTypes = {}
 
 ---Runs damage modifier functions based on the inflictor's type.
 ---@param target mobj_t
@@ -90,72 +38,60 @@ local function damageModifierbyInflictor(target, inflictor, ...)
 		return inflictorTypes[objecttype](player, target, inflictor, ...)
 	end
 end
---#endregion
 
---#region [ Orbinaut ] --
---- Modifies the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
-
----Controls what happens when an orbinaut hits a player.
----@param player player_t
----@param orbinaut mobj_t
-inflictorTypes[MT_ORBINAUT] = function(player, _, orbinaut)
-	capMomentumByTripwireSpeedThreshold(orbinaut, player)
-end
-
----Controls what happens when an orbinaut shield hits a player.
----@param player player_t
----@param orbinaut mobj_t
-inflictorTypes[MT_ORBINAUT_SHIELD] = function(player, _, orbinaut)
-	capMomentumByTripwireSpeedThreshold(orbinaut, player)
-end
---#endregion
-
---#region [ Jawz ] --
---- Modifies the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
-
----Controls what happens when a jawz hits a player.
----@param player player_t
----@param jawz mobj_t
-inflictorTypes[MT_JAWZ] = function(player, _, jawz)
-	capMomentumByTripwireSpeedThreshold(jawz, player)
-end
-
----Controls what happens when a jawz shield hits a player.
----@param player player_t
----@param jawz mobj_t
-inflictorTypes[MT_JAWZ_SHIELD] = function(player, _, jawz)
-	capMomentumByTripwireSpeedThreshold(jawz, player)
-end
---#endregion
-
---#region [ Landmine ] --
---- Changes the damage type to stumble if the landmine was sliding on-hit.
-
----Controls what happens when a landmine hits a player.
+---Applies stumble damage to a player that works similarly to a normal damage type.
 ---@param player player_t
 ---@param target mobj_t
----@param landmine mobj_t
+---@param inflictor mobj_t
 ---@param source mobj_t?
 ---@param damage integer
 ---@param damagetype damagetype
-inflictorTypes[MT_LANDMINE] = function(player, target, landmine, source, damage, damagetype)
-	if not landmine.reactiontime
+local function doStumbleDamage(player, target, inflictor, source, damage, damagetype)
+	if not (gametyperules & GTR_CIRCUIT)
 		return end
 
-	if damagetype & DMG_TYPEMASK ~= DMG_TUMBLE
+	if player.flashing and not P_PlayerInPain(player)
+		K_DoInstashield(player)
 		return end
 
-	if doStumbleDamage(player, target, landmine, source, damage, damagetype)
-		return false
+	if not P_DamageMobj(target, inflictor, source, damage, DMG_STUMBLE | DMG_WOMBO)
+		return end
+
+	player.flashing = K_GetKartFlashing(player)
+	K_TryHurtSoundExchange(target, source)
+	K_ApplyStun(player, inflictor, source, damage, damagetype)
+
+	if player.curshield
+		K_PopPlayerShield(player)
+
+	else
+		P_PlayerRingBurst(player, 5)
+		P_PlayRinglossSound(target, player)
 	end
+
+	if isValid(source)
+		local attacker = source.player
+		if isValid(attacker)
+			local amount = K_PvPAmpReward(20, attacker, player)
+			K_SpawnAmps(attacker, amount, target)
+		end
+	end
+
+	return true
 end
---#endregion
 
---#region [ Ballhog ] --
---- Disables hitlag to prevent ballhog explosion from locking players in a consecutive hitstop.
---- Disables punting to prevent the ballhog explosion from being punted.
+---Caps the momentum of an object based on the tripwire speed threshold for the target player.
+---@param player player_t
+---@param mobj mobj_t
+local function capMomentumByTripwireSpeedThreshold(player, _, mobj)
+	local speedcap = K_PlayerTripwireSpeedThreshold(player)
 
----Makes ballhog explosions unpuntable, as it looks visually weird.
+	mobj.momx = min(max($, -speedcap), speedcap)
+	mobj.momy = min(max($, -speedcap), speedcap)
+	mobj.momz = min(max($, -speedcap), speedcap)
+end
+
+---Ballhog: Makes ballhog explosions unpuntable, as it looks visually weird.
 ---It also disables hitlag for the object, to prevent locking a
 ---player in a consecutive hitstop for various seconds.
 ---@param boom mobj_t
@@ -165,16 +101,8 @@ local function modifyBallhogBoom(boom)
 
 	boom.flags = $ | MF_DONTPUNT | MF_NOHITLAGFORME
 end
---#endregion
 
---#region [ Toxomister ] --
---- Adds a delay of 1/3 of a second before being able to pass the toxomister cloud to another player.
---- Fixes players getting slowed down passing the cloud back and forth to each other.
-
----Delay before being able to pass the toxomister cloud back to the player who passed it to them.
-local TOXOMISTER_CLOUD_RETURNDELAY = TICRATE / 3
-
----Modifies the behavior of Toxomister Clouds when being passed to another player.
+---Toxomister Cloud: Modifies the behavior when being passed to another player.
 ---@param cloud mobj_t
 ---@param pmo mobj_t
 local function toxomisterCloudPass(cloud, pmo)
@@ -199,7 +127,7 @@ local function toxomisterCloudPass(cloud, pmo)
 		return end
 
 	---Update the time it was passed.
-	cloud.reactiontime = leveltime + TOXOMISTER_CLOUD_RETURNDELAY
+	cloud.reactiontime = leveltime + TOXOMISTERCLOUD_RETURNDELAY
 	cloud.lastlook = -1
 
 	if not isValid(target)
@@ -213,22 +141,24 @@ local function toxomisterCloudPass(cloud, pmo)
 	lastPlayer.toxomistercloud = nil
 	cloud.lastlook = #lastPlayer
 end
---#endregion
 
---#region [ Flame Shield ] --
---- Using flame shield to attack a player reduces the maximum gauge by 1/4 for every hit.
---- When the gauge penalty removes all the gauge, the flame shield will be used up.
+---Stone Shoe: Reduces the duration or removes it when it gets punted.
+---@param stoneshoe mobj_t
+local function stoneShoeThinker(stoneshoe)
+	if not isValid(stoneshoe)
+		return end
 
----Maximum amount of gauge the flameshield can have.
-local FLAMESHIELD_MAX = 120
+	stoneshoe.fuse = min($, 10 * TICRATE)
 
----Amount of hits the player can do with the flameshield before losing all their gauge.
-local FLAMESHOTS_DIV = 4
+	---If the stone shoe got punted, remove the object.
+	---This allows the target player to move at a normal speed
+	---instead of having an invisible object drag them down.
+	if stoneshoe.reappear
+		P_RemoveMobj(stoneshoe)
+	end
+end
 
----Regeneration rate for flameshield gauge after being capped.
-local FLAMELENGTH_REGENRATE = TICRATE / 2
-
----Resets the flame shield gauge penalty of a player.
+---Flame Shield: Resets the gauge penalty of a player.
 ---@param player player_t
 local function resetFlameLengthReduce(player)
 	if isValid(player)
@@ -236,7 +166,7 @@ local function resetFlameLengthReduce(player)
 	end
 end
 
----Resets the flame shield gauge penalty when the flame shield disappears.
+---Flame Shield: Resets the gauge penalty when the shield disappears.
 ---@param flameshield mobj_t
 local function resetFlameLengthReducebyFlameshield(flameshield)
 	if not (gametyperules & GTR_CIRCUIT)
@@ -252,7 +182,7 @@ local function resetFlameLengthReducebyFlameshield(flameshield)
 	resetFlameLengthReduce(pmo.player)
 end
 
----Reduce the maximum flameshield gauge based on the amount of times attacked with it.
+---Flame Shield: Apply maximum gauge reduction based on the amount of times attacked with it.
 ---@param flameshield mobj_t
 local function reduceFlameGaugeCap(flameshield)
 	if not (gametyperules & GTR_CIRCUIT)
@@ -299,34 +229,39 @@ inflictorTypes[MT_PLAYER] = function(_, _, inflictor)
 		end
 	end
 end
---#endregion
 
---#region [ Stone Shoe ] --
---- Reduced duration from 15 seconds to 10 seconds.
---- Detaches the stone shoe from a player if the stone shoe got punted by something.
-
----Reduces the duration of Stone Shoe or removes it when it gets punted.
----@param stoneshoe mobj_t
-local function stoneShoeThinker(stoneshoe)
-	if not isValid(stoneshoe)
+---Controls what happens when a landmine hits a player.
+---@param player player_t
+---@param target mobj_t
+---@param landmine mobj_t
+---@param source mobj_t
+---@param damage integer
+---@param damagetype damagetype
+---@return boolean
+inflictorTypes[MT_LANDMINE] = function(player, target, landmine, source, damage, damagetype)
+	if not landmine.reactiontime
 		return end
 
-	---Reduce the duration.
-	stoneshoe.fuse = INT32_MAX
+	if damagetype & DMG_TYPEMASK ~= DMG_TUMBLE
+		return end
 
-	---If the stone shoe got punted, remove the object.
-	---This allows the target player to move at a normal speed
-	---instead of having an invisible object drag them down.
-	if stoneshoe.reappear
-		P_RemoveMobj(stoneshoe)
+	---Landmine: Change the damage type to stumble if the landmine was sliding on-hit.
+	if doStumbleDamage(player, target, landmine, source, damage, damagetype)
+		return false
 	end
 end
---#endregion
+
+---Orbinaut & Jawz: Modify speed at which the player is hit at
+---based on their current tripwire speed threshold.
+inflictorTypes[MT_ORBINAUT] = capMomentumByTripwireSpeedThreshold
+inflictorTypes[MT_ORBINAUT_SHIELD] = capMomentumByTripwireSpeedThreshold
+inflictorTypes[MT_JAWZ] = capMomentumByTripwireSpeedThreshold
+inflictorTypes[MT_JAWZ_SHIELD] = capMomentumByTripwireSpeedThreshold
 
 addHook("ShouldDamage", damageModifierbyInflictor, MT_PLAYER)
 addHook("TouchSpecial", toxomisterCloudPass, MT_TOXOMISTER_CLOUD)
-addHook("PlayerSpawn", resetFlameLengthReduce)
 addHook("MobjSpawn", modifyBallhogBoom, MT_BALLHOGBOOM)
-addHook("MobjThinker", reduceFlameGaugeCap, MT_FLAMESHIELD)
 addHook("MobjThinker", stoneShoeThinker, MT_STONESHOE)
+addHook("PlayerSpawn", resetFlameLengthReduce)
+addHook("MobjThinker", reduceFlameGaugeCap, MT_FLAMESHIELD)
 addHook("MobjRemoved", resetFlameLengthReducebyFlameshield, MT_FLAMESHIELD)
