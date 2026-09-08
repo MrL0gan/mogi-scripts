@@ -137,7 +137,7 @@ inflictorTypes[MT_LANDMINE] = function(player, target, landmine, source, damage,
 	if damagetype & DMG_TYPEMASK ~= DMG_TUMBLE
 		return end
 
-	if doStumbleDamage(player, target, inflictor, source, damage, damagetype)
+	if doStumbleDamage(player, target, landmine, source, damage, damagetype)
 		return false
 	end
 end
