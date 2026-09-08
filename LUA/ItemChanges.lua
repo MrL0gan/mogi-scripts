@@ -55,6 +55,17 @@ local function doStumbleDamage(player, target, inflictor, source, damage, damage
 	return true
 end
 
+---Caps the momentum of an object based on the tripwire speed threshold for the target player.
+---@param mobj mobj_t
+---@param player player_t
+local function capMomentumByTripwireSpeedThreshold(mobj, player)
+	local speedcap = K_PlayerTripwireSpeedThreshold(player)
+
+	mobj.momx = min(max($, speedcap), speedcap)
+	mobj.momy = min(max($, speedcap), speedcap)
+	mobj.momz = min(max($, speedcap), speedcap)
+end
+
 ---Holds damage modifying functions by object type.
 ---@type table<mobjtype_t, function>
 local inflictorTypes = {}
@@ -82,41 +93,38 @@ end
 --#endregion
 
 --#region [ Orbinaut ] --
---- Removes the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
+--- Modifies the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
 
 ---Controls what happens when an orbinaut hits a player.
 ---@param player player_t
----@param target mobj_t
 ---@param orbinaut mobj_t
----@param source mobj_t?
----@param damage integer
----@param damagetype damagetype
-inflictorTypes[MT_ORBINAUT] = function(player, target, orbinaut, source, damage, damagetype)
-	---Remove all momentum.
-	orbinaut.momx, orbinaut.momy, orbinaut.momz = 0, 0, 0
+inflictorTypes[MT_ORBINAUT] = function(player, _, orbinaut)
+	capMomentumByTripwireSpeedThreshold(orbinaut, player)
+end
+
+---Controls what happens when an orbinaut shield hits a player.
+---@param player player_t
+---@param orbinaut mobj_t
+inflictorTypes[MT_ORBINAUT_SHIELD] = function(player, _, orbinaut)
+	capMomentumByTripwireSpeedThreshold(orbinaut, player)
 end
 --#endregion
 
 --#region [ Jawz ] --
---- Removes the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
+--- Modifies the momentum on-hit to prevent players being flung far off when a jawz hits them at extreme speeds.
 
 ---Controls what happens when a jawz hits a player.
 ---@param player player_t
----@param target mobj_t
 ---@param jawz mobj_t
----@param source mobj_t?
----@param damage integer
----@param damagetype damagetype
-inflictorTypes[MT_JAWZ] = function(player, target, jawz, source, damage, damagetype)
-	---Remove all momentum.
-	jawz.momx, jawz.momy, jawz.momz = 0, 0, 0
+inflictorTypes[MT_JAWZ] = function(player, _, jawz)
+	capMomentumByTripwireSpeedThreshold(jawz, player)
+end
 
-	/*if damagetype & DMG_TYPEMASK ~= DMG_WIPEOUT
-		return end*/
-
-	/*if doStumbleDamage(player, target, inflictor, source, damage, damagetype)
-		return false
-	end*/
+---Controls what happens when a jawz shield hits a player.
+---@param player player_t
+---@param jawz mobj_t
+inflictorTypes[MT_JAWZ_SHIELD] = function(player, _, jawz)
+	capMomentumByTripwireSpeedThreshold(jawz, player)
 end
 --#endregion
 
