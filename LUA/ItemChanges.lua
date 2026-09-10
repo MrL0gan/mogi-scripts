@@ -1,6 +1,9 @@
 --- Item Changes for MOGI Lounge
 --- by Yellow/@GlowingTail
 
+local PROJECTILESPEEDCAP_DISTFROM1ST = 5000
+local PROJECTILESPEEDCAP_MAXSPEED = 35 * FU
+
 local TOXOMISTERCLOUD_RETURNDELAY = TICRATE / 3
 
 local FLAMESHIELD_MAX = 120
@@ -16,6 +19,37 @@ local inflictorTypes = {}
 ---@return boolean
 local function isValid(ud)
 	return ud and ud.valid
+end
+
+---Clamps a number within a range of values between a defined minimum bound and a maximum bound.
+---@param value number
+---@param low number
+---@param high number
+---@return number
+local function clamp(value, low, high)
+	return min(max(value, low), high)
+end
+
+---Recales a number from the provided `inmin`/`inmax` to `outmin`/`outmax` using an easing function.
+---@param value number
+---@param inmin number
+---@param inmax number
+---@param outmin number
+---@param outmax number
+---@param easingfunc function?
+---@param easingparam fixed_t?
+---@return number
+local function rescale(value, inmin, inmax, outmin, outmax, easingfunc, easingparam)
+	---Handle edge case where min == max.
+	if inmin == inmax
+		return outmin
+	end
+
+	---Clamp the input value to the range and normalize it to the `FRACUNIT` range.
+	value = fixdiv(clamp($, inmin, inmax) - inmin, inmax - inmin)
+
+	---Return the result of using the specified easing function or linear function.
+	return (easingfunc or ease.linear)(value, outmin, outmax, easingparam)
 end
 
 ---Runs damage modifier functions based on the inflictor's type.
@@ -80,15 +114,30 @@ local function doStumbleDamage(player, target, inflictor, source, damage, damage
 	return true
 end
 
----Caps the momentum of an object based on the tripwire speed threshold for the target player.
+---Returns a speed limit based on how far the player is from first place.
 ---@param player player_t
----@param mobj mobj_t
-local function capMomentumByTripwireSpeedThreshold(player, _, mobj)
-	local speedcap = K_PlayerTripwireSpeedThreshold(player)
+---@return fixed_t
+local function getProjectileSpeedCap(player)
+	local distance = INT32_MAX
+	for others in players.iterate do
+		if not isValid(others)
+			continue end
 
-	mobj.momx = min(max($, -speedcap), speedcap)
-	mobj.momy = min(max($, -speedcap), speedcap)
-	mobj.momz = min(max($, -speedcap), speedcap)
+		if others.spectator
+			continue end
+
+		distance = min($, others.distancetofinish)
+	end
+
+	distance = player.distancetofinish - $
+	if distance == 0
+		return PROJECTILESPEEDCAP_MAXSPEED
+	end
+
+	return rescale(distance,
+	0, PROJECTILESPEEDCAP_DISTFROM1ST,
+	FU, PROJECTILESPEEDCAP_MAXSPEED,
+	ease.insine)
 end
 
 ---Ballhog: Makes ballhog explosions unpuntable, as it looks visually weird.
@@ -251,8 +300,18 @@ inflictorTypes[MT_LANDMINE] = function(player, target, landmine, source, damage,
 	end
 end
 
-inflictorTypes[MT_ORBINAUT] = capMomentumByTripwireSpeedThreshold
-inflictorTypes[MT_ORBINAUT_SHIELD] = capMomentumByTripwireSpeedThreshold
+---Controls what happens when an orbinaut hits a player.
+---@param player player_t
+---@param orbinaut mobj_t
+inflictorTypes[MT_ORBINAUT] = function(player, _, orbinaut)
+	---Orbinaut: Cap the impact speed based on how far this player is from first place.
+	local projectileSpeedCap = getProjectileSpeedCap(player)
+	orbinaut.momx = clamp($, -projectileSpeedCap, projectileSpeedCap)
+	orbinaut.momy = clamp($, -projectileSpeedCap, projectileSpeedCap)
+	orbinaut.momz = clamp($, -projectileSpeedCap, projectileSpeedCap)
+end
+
+inflictorTypes[MT_ORBINAUT_SHIELD] = inflictorTypes[MT_ORBINAUT]
 
 ---Controls what happens when a jawz hits a player.
 ---@param player player_t
