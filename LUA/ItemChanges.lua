@@ -251,12 +251,28 @@ inflictorTypes[MT_LANDMINE] = function(player, target, landmine, source, damage,
 	end
 end
 
----Orbinaut & Jawz: Modify speed at which the player is hit at
----based on their current tripwire speed threshold.
 inflictorTypes[MT_ORBINAUT] = capMomentumByTripwireSpeedThreshold
 inflictorTypes[MT_ORBINAUT_SHIELD] = capMomentumByTripwireSpeedThreshold
-inflictorTypes[MT_JAWZ] = capMomentumByTripwireSpeedThreshold
-inflictorTypes[MT_JAWZ_SHIELD] = capMomentumByTripwireSpeedThreshold
+
+---Controls what happens when a jawz hits a player.
+---@param player player_t
+---@param target mobj_t
+---@param jawz mobj_t
+---@param source mobj_t
+---@param damage integer
+---@param damagetype damagetype
+---@return boolean
+inflictorTypes[MT_JAWZ] = function(player, target, jawz, source, damage, damagetype)
+	if damagetype & DMG_TYPEMASK ~= DMG_WIPEOUT
+		return end
+
+	---Jawz: Change the damage type to stumble.
+	if doStumbleDamage(player, target, inflictor, source, damage, damagetype)
+		return false
+	end
+end
+
+inflictorTypes[MT_JAWZ_SHIELD] = inflictorTypes[MT_JAWZ]
 
 addHook("ShouldDamage", damageModifierbyInflictor, MT_PLAYER)
 addHook("TouchSpecial", toxomisterCloudPass, MT_TOXOMISTER_CLOUD)
