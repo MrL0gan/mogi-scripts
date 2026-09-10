@@ -346,7 +346,7 @@ inflictorTypes[MT_JAWZ] = function(player, target, jawz, source, damage, damaget
 		return end
 
 	---Jawz: Change the damage type to stumble.
-	if doStumbleDamage(player, target, inflictor, source, damage, damagetype)
+	if doStumbleDamage(player, target, jawz, source, damage, damagetype)
 		return false
 	end
 end
