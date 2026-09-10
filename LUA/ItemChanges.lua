@@ -140,17 +140,6 @@ local function getProjectileSpeedCap(player)
 	ease.insine)
 end
 
----Ballhog: Makes ballhog explosions unpuntable, as it looks visually weird.
----It also disables hitlag for the object, to prevent locking a
----player in a consecutive hitstop for various seconds.
----@param boom mobj_t
-local function modifyBallhogBoom(boom)
-	if not isValid(boom)
-		return end
-
-	boom.flags = $ | MF_DONTPUNT | MF_NOHITLAGFORME
-end
-
 ---Toxomister Cloud: Modifies the behavior when being passed to another player.
 ---@param cloud mobj_t
 ---@param pmo mobj_t
@@ -333,9 +322,13 @@ end
 
 inflictorTypes[MT_JAWZ_SHIELD] = inflictorTypes[MT_JAWZ]
 
+---Ballhog: Makes ballhog explosions unpuntable, as it looks visually weird.
+---It also disables hitlag for the object, to prevent locking a
+---player in a consecutive hitstop for various seconds.
+mobjinfo[MT_BALLHOGBOOM].flags = $ | MF_DONTPUNT | MF_NOHITLAGFORME
+
 addHook("ShouldDamage", damageModifierbyInflictor, MT_PLAYER)
 addHook("TouchSpecial", toxomisterCloudPass, MT_TOXOMISTER_CLOUD)
-addHook("MobjSpawn", modifyBallhogBoom, MT_BALLHOGBOOM)
 addHook("MobjThinker", stoneShoeThinker, MT_STONESHOE)
 addHook("PlayerSpawn", resetFlameLengthReduce)
 addHook("MobjThinker", reduceFlameGaugeCap, MT_FLAMESHIELD)
