@@ -52,6 +52,24 @@ local function rescale(value, inmin, inmax, outmin, outmax, easingfunc, easingpa
 	return (easingfunc or ease.linear)(value, outmin, outmax, easingparam)
 end
 
+---Spawn and setup an image of the object that will make it look like it got punted.
+---@param mobj mobj_t
+local function createPuntedImage(mobj)
+	local img = P_SpawnGhostMobj(mobj)
+	K_MakeObjectReappear(mobj)
+
+	img.flags = $ & ~MF_NOGRAVITY
+	img.renderflags = mobj.renderflags & ~RF_DONTDRAW
+	img.extravalue1 = 1
+	img.extravalue2 = 2
+	img.fuse = 2 * TICRATE
+
+	local angle = K_MomentumAngle(mobj)
+	local speed = max(60 * mapobjectscale, fixhypot(mobj.momx, mobj.momy) * 2)
+	P_InstaThrust(img, angle, speed)
+	P_SetObjectMomZ(img, speed)
+end
+
 ---Runs damage modifier functions based on the inflictor's type.
 ---@param target mobj_t
 ---@param inflictor mobj_t?
@@ -182,17 +200,30 @@ end
 
 ---Stone Shoe: Reduces the duration or removes it when it gets punted.
 ---@param stoneshoe mobj_t
-local function stoneShoeThinker(stoneshoe)
+---@param punted boolean
+local function stoneShoeThinker(stoneshoe, punted)
 	if not isValid(stoneshoe)
 		return end
 
 	stoneshoe.fuse = min($, 10 * TICRATE)
 
-	---If the stone shoe got punted, remove the object.
+	---If the stone shoe or any part of it's chain get punted, remove the stone shoe.
 	---This allows the target player to move at a normal speed
 	---instead of having an invisible object drag them down.
-	if stoneshoe.reappear
-		P_RemoveMobj(stoneshoe)
+	local chain = stoneshoe
+	while isValid(chain) do
+		if not punted and chain.reappear
+			stoneShoeThinker(stoneshoe, true)
+			P_RemoveMobj(stoneshoe)
+			return
+
+		---If a part got punted, make the rest of the chain look like
+		---they've been punted too instead of disappearing suddendly.
+		elseif punted and not chain.reappear
+			createPuntedImage(chain)
+		end
+
+		chain = $.hnext
 	end
 end
 
