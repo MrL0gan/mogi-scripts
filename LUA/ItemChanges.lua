@@ -136,7 +136,7 @@ local function getProjectileSpeedCap(player)
 
 	return rescale(distance,
 	0, PROJECTILESPEEDCAP_DISTFROM1ST,
-	FU, PROJECTILESPEEDCAP_MAXSPEED,
+	PROJECTILESPEEDCAP_MAXSPEED, FU,
 	ease.insine)
 end
 
