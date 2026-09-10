@@ -7,14 +7,14 @@ local MAXGRADINGFACTOR = FRACUNIT * 3 / 2
 local baseawardincrease = CV_RegisterVar{
 	name = "ringbox_rewardincrease",
 	flags = CV_NETVAR | CV_SHOWMODIF,
-	defaultvalue = 0,
+	defaultvalue = 2,
 	possiblevalue = {MIN = 0, MAX = UINT8_MAX - KSM_JACKPOT}
 }
 
 local gradingfactor_req = CV_RegisterVar{
 	name = "ringbox_rewardexpfactor",
 	flags = CV_NETVAR | CV_FLOAT | CV_SHOWMODIF,
-	defaultvalue = 1,
+	defaultvalue = "0.6",
 	possiblevalue = {MIN = MINGRADINGFACTOR, MAX = MAXGRADINGFACTOR}
 }
 
