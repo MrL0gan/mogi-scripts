@@ -10,3 +10,27 @@ SkyboxScale = 32
 CameraHeight = 140
 NoComms = True
 hidden = true
+
+Level FAV_DimensionRift
+LevelName = Dimension Rift
+TypeOfLevel = Battle
+MobjScale = FRACUNIT/5
+SkyTexture = FAVSKY1
+Music = FAVRIF
+Followers = Chaos Drive,Chaos Emerald,Super Emerald
+LobbySize = Medium
+NoComms = True
+Lua.Fav_ballswitcher = goaway
+hidden = true
+
+Level FAV_DimensionRiftClassic
+NoVisitNeeded = True
+LevelName = Dimension Rift
+ZoneTitle = CLASSIC
+TypeOfLevel = Battle
+MobjScale = FRACUNIT/5
+SkyTexture = FAVSKY1
+Music = FAVRIF
+LobbySize = Small
+Followers = Chaos Drive
+hidden = true

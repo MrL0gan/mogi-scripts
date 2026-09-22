@@ -1,0 +1,7 @@
+{
+    "name": "MOGI",
+    "author": "DRRR MOGI LOUNGE TEAM",
+    "description": "Scripts, SOCs and other things used for Mogi.",
+    "version": "3.0.0",
+    "game_version": "2.4"
+}
