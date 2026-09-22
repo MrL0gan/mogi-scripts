@@ -127,3 +127,18 @@ SkyTexture = CSBSKY01
 SkyboxScaleZ = 0
 MobjScale = FRACUNIT*25/100
 Hidden = True
+
+Level DIG_SpacePort9
+LevelName = Spaceport 9
+TypeofLevel = Race
+NumLaps = 3
+Music = SPACE9
+SkyTexture = S1SLZSKY
+MobjScale = FRACUNIT*20/100
+LightAngle = 180
+LightContrast = 30
+NoVisitNeeded = true
+SkyboxScale = 4
+NoZone = true
+PositionMusic = SPC9IN
+hidden = true
