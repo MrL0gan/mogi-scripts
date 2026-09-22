@@ -1,0 +1,17 @@
+Level ABS_QuartzQuadrant
+MobjScale = 1*FRACUNIT/4
+NoVisitNeeded = True
+LevelName = Quartz Quadrant
+NoZone = False
+Music = QUQA1
+NumLaps = 1
+TypeOfLevel = Race
+SkyTexture = QQPLDSK1
+Weather = PRECIP_SPARKLES
+SkyboxScale = 16
+LightContrast = 30
+LightAngle = 135
+Darkness = -0.5
+Act = 2
+Lua.mogi_capsules = true
+Lua.mogicap_3383 = KITEM_MINE,1

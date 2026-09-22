@@ -1,0 +1,57 @@
+Level THK_SavannahCitadel2
+LevelName = Savannah
+ZoneTitle = Citadel
+NoVisitNeeded = True
+Act = 2
+TypeOfLevel = Race
+NumLaps = 7
+Music = BSACI2
+SkyTexture = SKYSCZ
+SkyboxScale = 4
+MobjScale = FRACUNIT/3
+LightAngle = 150
+LightContrast = 72
+hidden = true
+
+Level THK_SecretBase
+LevelName = Secret Base
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKYSEBA
+Music = SECBA
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+hidden = true
+
+# thanks Yume LOL
+Level THK_ChickenRing
+LevelName = Chicken
+ZoneTitle = Ring
+NoVisitNeeded = True
+TypeOfLevel = Battle
+Music = CHRNG,BLENDY
+SkyTexture = ~031
+Followers = Flicky,Red Flicky,Pink Flicky,Green Flicky
+MobjScale = FRACUNIT/3
+LobbySize = Duel
+
+Level THK_RouletteRumble
+LevelName = Roulette Rumble
+NoVisitNeeded = True
+TypeOfLevel = Battle
+Palette = 18
+Music = RULRUM
+SkyTexture = SKY4561
+Followers = Balloon,Barrel
+MobjScale = FRACUNIT/3
+LobbySize = Large
+SkyboxScale = 5
+SkyboxScaleZ = 0
+
+Cup THK_Attraction
+Icon = CUP_ATTR
+LevelList = THK_SavannahCitadel2,THK_DarkFortress2,THK_SecretBase
+BonusGame = THK_RouletteRumble,THK_ChickenRing
+SpecialStage = RR_SealedStarFountain
+Monitor = 3

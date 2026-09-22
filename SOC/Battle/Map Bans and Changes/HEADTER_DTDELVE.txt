@@ -1,0 +1,73 @@
+Level DIG_CageFight
+LevelName = Cage Fight
+TypeOfLevel = Battle
+Music = DIGBT1
+SkyTexture = PIT
+MobjScale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Followers = Chao,Hero Chao,Dark Chao
+LobbySize = Duel
+hidden = true
+
+Level DIG_Q3DM7
+LevelName = Seismic Shrine
+NoZone = true
+TypeOfLevel = Battle
+SkyTexture = DIGSKY2
+MobjScale = FRACUNIT/4
+LightContrast = 16
+LightAngle = 20
+Followers = Cacodemon
+Music = Q3DM7
+LobbySize = Large
+hidden = true
+
+Level DIG_MikuFestB
+LevelName = Miku Festival
+Act = 2
+NoZone = true
+TypeofLevel = Battle
+SkyTexture = PIT
+Music = SRPHCV
+MobjScale = FRACUNIT*25/100
+LightContrast = 16
+LobbySize = Medium
+hidden = true
+
+Level DIG_ScarletShelter
+LevelName = Scarlet Shelter
+NoZone = true
+TypeofLevel = Battle
+Music = SCSHEL
+SkyTexture = PIT
+MobjScale = FRACUNIT*25/100
+LightContrast = 16
+LobbySize = Small
+hidden = true
+
+Level DIG_BugHunter
+LevelName = Bug Breakout
+TypeOfLevel = Battle
+Music = U50BUG
+SkyTexture = PIT
+MobjScale = FRACUNIT/4
+Followers = Octus,Orbinaut,Bata-pyon,Anton
+LobbySize = Small
+NoVisitNeeded = True
+Palette = 5050
+PositionMusic = U50BPS
+NoZone = true
+hidden = true
+
+Level DIG_Q3DM17
+LevelName = Distant Plaza
+TypeOfLevel = Battle
+SkyTexture = GOINSKY
+MobjScale = FRACUNIT/4
+Followers = Orbinaut
+LobbySize = Small
+NoVisitNeeded = True
+Music = Q3DM17
+NoZone = true
+hidden = true

@@ -1,0 +1,19 @@
+Level DR_GAMBLECANYON
+LevelName = Gamble Canyon
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = SKYTWZ
+Music = HIGHRO
+Mobjscale = FRACUNIT/4
+SkyboxScale = 2
+NoVisitNeeded = True
+Lua.mogi_capsules = true
+Lua.mogicap_131 = KITEM_BANANA,1
+Lua.mogicap_1343 = KITEM_ORBINAUT,1
+Lua.mogicap_113 = KITEM_ORBINAUT,1
+Lua.mogicap_48 = KITEM_ORBINAUT,1
+Lua.mogicap_151 = KITEM_SUPERRING,2
+Lua.mogicap_banana = KCAPSULE_RING,10
+Lua.mogicap_droptarget = KITEM_BANANA,1
+Lua.mogicap_1333 = KITEM_LANDMINE,1
+Lua.mogicap_129 = KITEM_BANANA,1

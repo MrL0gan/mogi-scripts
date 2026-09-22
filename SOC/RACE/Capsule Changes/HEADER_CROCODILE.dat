@@ -1,0 +1,14 @@
+Level YTC_NimbusLake
+LevelName = Nimbus Lake
+NoVisitNeeded = True
+TypeOfLevel = Race
+Numlaps = 3
+Skytexture = NLZSKY1
+Music = NMBLKZ
+Mobjscale = FRACUNIT/4
+LightContrast = 40
+LightAngle = 225
+Lua.mogi_capsules = true
+Lua.mogicap_1392 = KITEM_BANANA
+Lua.mogicap_1393 = KITEM_BANANA
+Lua.mogicap_174 = KITEM_ORBINAUT,2

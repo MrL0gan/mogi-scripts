@@ -1,0 +1,33 @@
+Level ABS_PressGarden2
+MobjScale = 1*FRACUNIT/4
+NoVisitNeeded = True
+LevelName = Press Garden
+Weather = PRECIP_LSPT
+Act = 2
+NoZone = False
+Music = 1PRGA
+Palette = 138
+NumLaps = 3
+TypeOfLevel = Race
+SkyTexture = SKYPGZ2
+SkyboxScale = 16
+LightContrast = 60
+LightAngle = 90
+Darkness = -0.5
+Hidden = True
+
+Level ABS_TheBeginning
+MobjScale = FRACUNIT/4
+NoVisitNeeded = True
+LevelName = The Beginning
+NoZone = True
+NumLaps = 2
+TypeOfLevel = Race
+Music = C1RB
+Palette = PAL6525
+SkyTexture = SKYC1F
+SkyboxScale = 0
+LightContrast = 60
+LightAngle = 180
+Darkness = 1
+Hidden = True

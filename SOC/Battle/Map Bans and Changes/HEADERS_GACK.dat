@@ -1,0 +1,35 @@
+Level GACK_MegaStereoExplosion
+NoVisitNeeded = True
+LevelName = Mega Stereo Explosion
+TypeOfLevel = Battle
+Music = GKMOM
+SkyTexture = SKY766
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+Followers = Jetarang,Balldron,Bomber
+LobbySize = Medium
+hidden = true
+
+Level GACK_AmbushAquarium
+NoVisitNeeded = True
+LevelName = Ambush Aquarium
+TypeOfLevel = Battle
+Music = GKCLST
+SkyTexture = GKAASKY2
+MobjScale = FRACUNIT/3
+SkyboxScale = 4
+Followers = Aquis,Bubbles,Octus
+LobbySize = Medium
+hidden = true
+
+Level GACK_SunlightSanctuary
+NoVisitNeeded = True
+LevelName = Sunlight Sanctuary
+TypeOfLevel = Battle
+Music = GKMOON
+SkyTexture = SKY766
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+Followers = Bat,Hyudoro,Boo
+LobbySize = Medium
+hidden = true

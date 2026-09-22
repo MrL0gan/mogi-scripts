@@ -1,0 +1,168 @@
+Level GACK_GraveyardGateway
+LevelName = Graveyard Gateway
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+Weather = PRECIP_STORMRIG
+SkyTexture = GGGRSKY
+Music = GGRGA
+EncoreMusic = GGRGA
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_BrinewaterSprings
+LevelName = Brinewater
+ZoneTitle = Springs
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 6
+PositionMusic = GKSPL
+Music = GKSKA,GKSEA
+EncoreMusic = GKBIG
+SkyTexture = SKY766
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_MachinePassage
+LevelName = Machine
+ZoneTitle = Passage
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = GKMPSKY
+Music = GKPASS,GKHALB
+EncoreMusic = GKPASS,GKHALB
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+################
+###TEKNO CUP####
+################
+
+Level GACK_StereoExplosion
+LevelName = Stereo Explosion
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 4
+SkyTexture = SKY766
+Music = GKFLB,GKTEK
+EncoreMusic = GKFLB,GKTEK
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_MachineHeart
+LevelName = Machine Heart
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = GKMHSKY1
+PositionMusic = GKSINS
+Music = GKLOC
+EncoreMusic = GKLOC
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_DeadLine2
+LevelName = Dead Vertex
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKY4417
+Music = GKWUNB
+EncoreMusic = GKWUNB
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_Aeropolis
+LevelName = Aeropolis
+NoZone = True
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 2
+SkyTexture = ~240
+Music = GKZEN
+EncoreMusic = GKZEN
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+hidden = true
+
+################
+###AXIOM CUP####
+################
+
+Level GACK_Absu
+LevelName = Absu
+NoZone = True
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKY766
+PositionMusic = GKOMI
+Music = GKTRI
+EncoreMusic = GKTRI
+SkyboxScale = 32
+MobjScale = FRACUNIT/8
+hidden = true
+
+################
+#CATACLYSM CUP##
+################
+
+Level GACK_SkybreakerBlitz
+LevelName = Skybreaker Blitz
+SectionRace = True
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 1
+Weather = PRECIP_STORMRIG
+SkyTexture = SKY4417
+Music = GKEDG
+EncoreMusic = GKEDG
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_CausticCavern
+LevelName = Caustic Cavern
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKY4417
+Music = GKDINO
+EncoreMusic = GKDINO
+Followers = Claw Guy,Shade Core,Bat
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_TerrorTrench
+LevelName = Terror Trench
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 2
+SkyTexture = GKTTSKY
+Music = GKWHLE
+EncoreMusic = GKWHLE
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level GACK_MadMoonlight
+LevelName = Mad Moonlight
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKY4417
+LightAngle = 0
+LightContrast = 32
+Music = GKDTH
+EncoreMusic = GKDTH
+Followers = Bat,Hyudoro,Boo
+MobjScale = FRACUNIT/4
+hidden = true
+
+freeslot
+sfx_gksecu
+sfx_gkankh

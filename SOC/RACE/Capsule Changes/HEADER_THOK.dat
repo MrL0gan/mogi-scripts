@@ -1,0 +1,41 @@
+Level THK_DarkFortress2
+LevelName = Dark Fortress
+TypeOfLevel = Race
+NoVisitNeeded = True
+Act = 2
+NumLaps = 2
+SkyTexture = SKY4239
+Music = DFOR2,DF2ALT
+MobjScale = FRACUNIT/4
+SkyboxScale = 6
+LightAngle = 25
+LightContrast = 64
+Darkness = 0.25
+SkyboxScaleZ = 0.9
+Lua.mogi_capsules = true
+Lua.mogicap_428 = KITEM_ORBINAUT,1
+Lua.mogicap_432 = KITEM_ORBINAUT,1
+Lua.mogicap_418 = KITEM_ORBINAUT,1
+Lua.mogicap_sneaker = KITEM_SUPERRING,2 
+Lua.mogicap_323 = KCAPSULE_RING,3
+Lua.mogicap_1820 = KCAPSULE_RING,3
+Lua.mogicap_901 = KCAPSULE_RING,3
+Lua.mogicap_1815 = KCAPSULE_RING,3
+Lua.mogicap_896 = KCAPSULE_RING,3
+
+Level THK_BubblyWashingMachine
+LevelName = Bubbly Washing
+ZoneTitle = Machine
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 4
+MobjScale = 4*FRACUNIT/7
+SkyTexture = SKYTINKR
+Music = BUWAMA
+LightAngle = 16
+LightContrast = 32
+SkyboxScale = 0.25
+Lua.mogi_capsules = true
+Lua.mogicap_1182 = KCAPSULE_RING,1
+Lua.mogicap_1183 = KCAPSULE_RING,1
+Lua.mogicap_628 = KITEM_ORBINAUT,1

@@ -1,0 +1,20 @@
+Level LOG_MediaStudio2
+NoVisitNeeded = True
+LevelName = Media
+ZoneTitle = Studio
+Act = 2
+TypeOfLevel = Race
+Music = LOGMS2
+SkyTexture = MSSTARS
+MobjScale = FRACUNIT*1/6
+LightAngle = 270
+LightContrast = 48
+Lua.mogi_capsules = true
+Lua.mogicap_119 = KITEM_ORBINAUT,2
+Lua.mogicap_489 = KITEM_JAWZ,1
+Lua.mogicap_488 = KITEM_JAWZ,1
+Lua.mogicap_739 = KCAPSULE_RING,1
+Lua.mogicap_740 = KCAPSULE_RING,1
+Lua.mogicap_742 = KCAPSULE_RING,1
+Lua.mogicap_743 = KCAPSULE_RING,1
+Lua.mogicap_744 = KITEM_ORBINAUT,1

@@ -1,0 +1,54 @@
+Level THK_RouletteRumble
+LevelName = Roulette Rumble
+NoVisitNeeded = True
+TypeOfLevel = Battle
+Palette = 18
+Music = RULRUM
+SkyTexture = SKY4561
+Followers = Balloon,Barrel
+MobjScale = FRACUNIT/3
+LobbySize = Large
+SkyboxScale = 5
+SkyboxScaleZ = 0
+hidden = true
+
+Level THK_AmberInterstate
+NoVisitNeeded = True
+LevelName = Amber Interstate
+TypeOfLevel = Battle
+SkyTexture = ~159
+Mobjscale = FRACUNIT*20/100
+LightAngle = 0
+LightContrast = 64
+LobbySize = Medium
+Music = ABRINT
+Darkness = -0.5
+hidden = true
+
+Level THK_FinalTentination
+NoVisitNeeded = True
+LevelName = Final
+ZoneTitle = Tentination
+TypeOfLevel = Battle
+Music = FINTNT
+SkyTexture = FDSKY
+Darkness = 0.1
+LightAngle = 64
+SkyboxScale = 0
+LightContrast = 72
+MobjScale = FRACUNIT/4
+Followers = Nebula
+LobbySize = Small
+hidden = true
+
+Level THK_ChickenRing
+LevelName = Chicken
+ZoneTitle = Ring
+NoVisitNeeded = True
+TypeOfLevel = Battle
+Music = CHRNG,BLENDY
+SkyTexture = ~031
+Followers = Flicky,Red Flicky,Pink Flicky,Green Flicky
+MobjScale = FRACUNIT/3
+LobbySize = Duel
+hidden = true

@@ -1,0 +1,12 @@
+Level FAV_PipePanic
+LevelName = Pipe Panic
+TypeOfLevel = Battle
+MobjScale = FRACUNIT/3
+SkyTexture = SKYEC
+Music = PIPEPA
+AssociatedMusic = PIPEPE
+LobbySize = Small
+SkyboxScale = 32
+CameraHeight = 140
+NoComms = True
+hidden = true

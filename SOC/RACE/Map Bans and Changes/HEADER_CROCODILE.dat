@@ -1,0 +1,24 @@
+Level YTC_Chartreuse_Woods
+LevelName = Chartreuse Woods
+TypeOfLevel = Race
+Numlaps = 3
+Skytexture = PCKSKYBG
+Weather = PRECIP_FIREFLIES
+Music = ROUTEN
+Mobjscale = FRACUNIT/4
+LightContrast = 40
+LightAngle = 225
+hidden = true
+
+Level YTC_BoulderstoneAlpines
+LevelName = Boulderstone Alpines
+NoVisitNeeded = True
+TypeOfLevel = Race
+Numlaps = 3
+Skytexture = BAZSKY1
+Weather = PRECIP_BLIZZARD
+Music = BSALPZ,BSALPA
+Mobjscale = FRACUNIT/4
+LightContrast = 40
+LightAngle = 225
+hidden = true

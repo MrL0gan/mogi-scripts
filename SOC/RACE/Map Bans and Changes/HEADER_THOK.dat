@@ -1,0 +1,27 @@
+Level THK_SavannahCitadel2
+LevelName = Savannah
+ZoneTitle = Citadel
+NoVisitNeeded = True
+Act = 2
+TypeOfLevel = Race
+NumLaps = 6
+Music = SAVCI2
+SkyTexture = SKYSCZ
+SkyboxScale = 4
+MobjScale = 4*FRACUNIT/14
+Palette = 501
+LightAngle = 150
+LightContrast = 80
+CameraHeight = 130
+Hidden = true
+
+Level THK_SecretBase
+LevelName = Secret Base
+TypeOfLevel = Race
+NoVisitNeeded = True
+NumLaps = 3
+SkyTexture = SKYSEBA
+Music = SECBA
+MobjScale = FRACUNIT/4
+SkyboxScale = 0.25
+Hidden = true

@@ -1,0 +1,14 @@
+Level ABS_SonicManiaTitleScreen
+NoVisitNeeded = True
+LevelName = Sonic Island
+NoZone = True
+TypeOfLevel = Battle
+Music = 1SMTS
+PositionMusic = 2SMTS
+Followers = Flicky
+SkyTexture = SMTS
+Mobjscale = FRACUNIT/6
+SkyboxScale = 0
+LightContrast = 30
+LightAngle = 90
+hidden = true

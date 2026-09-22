@@ -1,0 +1,36 @@
+Level DIG_LovelyLab
+LevelName = Lovely Lab
+TypeofLevel = Race
+NumLaps = 3
+SkyTexture = LLSKY
+Music = LOVEM,LOVEE
+MobjScale = FRACUNIT*27/100
+Followers = Chao
+LightContrast = 64
+Lua.usesdigglesaves = true
+Lua.mogi_capsules = true
+Lua.mogicap_315 = KITEM_ORBINAUT,2
+Lua.mogicap_1103 = KITEM_BANANA,1
+Lua.mogicap_1407 = KITEM_SUPERRING,5
+
+Level DIG_SensSpeedway
+LevelName = Sen's Fortress
+NoZone = true
+TypeofLevel = Race
+NumLaps = 2
+SkyTexture = TPSSKYT
+MobjScale = FRACUNIT*25/100
+Music = DIGSEN
+PositionMusic = DIGBEL
+SkyboxScale = 4
+Lua.sensfortressballs = true
+LightAngle = 0
+LightContrast = 48
+Lua.usesdigglesaves = true
+Lua.mogi_capsules = true
+Lua.mogicap_1136 = KITEM_JAWZ,1
+Lua.mogicap_1135 = KITEM_JAWZ,1
+Lua.mogicap_887 = KITEM_ORBINAUT,2
+Lua.mogicap_888 = KITEM_ORBINAUT,2
+Lua.mogicap_1327 = KITEM_BANANA,1
+Lua.mogicap_1609 = KITEM_SUPERRING,1

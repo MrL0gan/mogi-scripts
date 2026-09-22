@@ -1,0 +1,136 @@
+Level FAV_DummieIsland
+LevelName = Dummie Island
+NoZone = true
+TypeOfLevel = Race
+MobjScale = FRACUNIT/3
+Music = DUISLA
+AssociatedMusic = DUISEX
+Darkness = 2
+PositionMusic = DUISIN
+SkyTexture = SKYDI
+SkyboxScale = 0
+LightContrast = 69
+LightAngle = 180
+NumLaps = 3
+Followers = Hermit Crab,Flicky,Red Flicky,Dove,Whirl,Motobuddy,Kabasira
+NoComms = True
+Lua.Fav_DropDummie = Sure
+
+Level FAV_FreezerFolley
+LevelName = Freezer Folley
+TypeOfLevel = Race
+MobjScale = FRACUNIT/3
+Music = FREFOL
+AssociatedMusic = FREFOE
+PositionMusic = FREFOI
+Darkness = 2
+SkyTexture = FRFOSK
+SkyboxScale = .5
+LightContrast = 72
+LightAngle = 90
+NumLaps = 3
+Weather = PRECIP_SUNDAEDRIVE
+NoComms = True
+Hidden = True
+
+Level FAV_SpringsSpring
+LevelName = Springs Spring
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+Music = SPRSPR
+AssociatedMusic = SPRSPE
+PositionMusic = SPRSPI
+Weather = PRECIP_HGPB
+SkyTexture = SKYSW
+SkyboxScale = 0
+NumLaps = 4
+NoComms = True
+Hidden = True
+
+Level FAV_BeachsideBash
+LevelName = Beachside Bash
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+Music = BEABAS
+AssociatedMusic = BBZEND
+PositionMusic = BBZINT
+SkyTexture = SPSKYA0
+LightAngle = 180
+LightContrast = 80
+SkyboxScale = 0
+NumLaps = 3
+NoComms = True
+Lua.Fav_DropBananas = Sure
+Hidden = True
+
+Level FAV_HexacolorHeaven
+LevelName = Hexacolor Heaven
+NoZone = true
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+Music = HEXHEV,HEXHE2
+PositionMusic = HEXHEI
+AssociatedMusic = HEXHEE
+SkyTexture = HEXASKY
+SkyboxScale = 0
+NumLaps = 2
+Palette = 70
+EncorePal = 71
+Darkness = 2.25
+NoComms = True
+Hidden = True
+
+Level FAV_________
+LevelName =      
+NoZone = true
+MobjScale = FRACUNIT/3
+SkyTexture = ~031
+NumLaps = 1
+Music = FAV___
+Hidden = True
+NoComms = True
+
+Level FAV_DummieIslandClassic
+NoVisitNeeded = True
+LevelName = Dummie Island
+ZoneTitle = CLASSIC
+TypeOfLevel = Race
+MobjScale = FRACUNIT/3
+Music = DUISLA
+Darkness = 2
+PositionMusic = DUISIN
+SkyTexture = SKYDI
+LightContrast = 69
+LightAngle = 180
+NumLaps = 3
+NoComms = True
+Hidden = True
+
+Level FAV_BeachsideBashClassic
+NoVisitNeeded = True
+LevelName = Beachside Bash
+ZoneTitle = CLASSIC
+TypeOfLevel = Race
+MobjScale = FRACUNIT/3
+Music = BEABAS
+PositionMusic = BBZINT
+SkyTexture = SPSKYA0
+LightAngle = 180
+LightContrast = 80
+SkyboxScale = 0
+NumLaps = 4
+NoComms = True
+Hidden = True
+
+Level FAV_YourReward
+LevelName = Doodle
+NoZone = true
+TypeOfLevel = Race
+MobjScale = 7*FRACUNIT/24
+Music = FAVSMB
+AssociatedMusic = DUISEX
+Darkness = 2
+PositionMusic = FAVSUN
+NumLaps = 2
+NoComms = True
+Hidden = True

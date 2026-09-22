@@ -1,0 +1,19 @@
+Level DRTR_PerilPagoda
+LevelName = Peril Pagoda
+TypeOfLevel = Battle
+Music = PPGODA
+MobjScale = FRACUNIT/4
+SkyTexture = PPGDSKY1
+NoVisitNeeded = True
+LobbySize = Medium
+hidden = true
+
+Level DRTR_OceanHighrise
+LevelName = Ocean Highrise
+TypeOfLevel = Battle
+Music = OCNHGR
+MobjScale = FRACUNIT/4
+SkyTexture = OCHGSKY1
+SkyboxScale = 8
+LobbySize = Small
+hidden = true

@@ -1,0 +1,19 @@
+Level FT_IceParadise
+LevelName = Ice Paradise
+NoVisitNeeded = True
+TypeOfLevel = Race
+Act = 2
+NumLaps = 3
+SkyboxScaleZ = 0
+Weather = PRECIP_BLIZZARD
+SkyTexture = ~150
+Music = ICEPA2
+PositionMusic = ADVPOS
+SkyboxScale = 8
+MObjscale = FRACUNIT/4
+LightContrast = 80
+LightAngle = 189
+Lua.mogi_capsules = true
+Lua.mogicap_673 = KITEM_JAWZ,1
+Lua.mogicap_327 = KITEM_SUPERRING,2
+Lua.mogicap_325 = KITEM_BANANA,1

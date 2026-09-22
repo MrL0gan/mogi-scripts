@@ -1,0 +1,110 @@
+Level FT_LeafForest
+LevelName = Leaf Forest
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 4
+SkyTexture = ~150
+Music = LEFZ
+PositionMusic = ADVPOS
+SkyboxScale = 8
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 135
+Hidden = True
+
+Level FT_HotCrater
+LevelName = Hot Crater
+NoVisitNeeded = True
+TypeOfLevel = Race
+Act = 2
+NumLaps = 1
+SectionRace = True
+SkyTexture = ~150
+Music = HTCRR
+PositionMusic = ADVPOS
+SkyboxScale = 16
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Hidden = True
+
+Level FT_SkyCanyon
+LevelName = Sky Canyon
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 2
+Music = SKYCN
+PositionMusic = ADVPOS
+SkyboxScale = 16
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 315
+Hidden = True
+
+Level FT_TechnoBase
+LevelName = Techno Base
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 6
+Music = TECBA1
+PositionMusic = ADVPOS
+SkyboxScale = 8
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Hidden = True
+
+Level FT_DeathRuins
+LevelName = Death Ruins
+NoVisitNeeded = True
+NoZone = True
+TypeOfLevel = Race
+NumLaps = 3
+Music = DEADR
+PositionMusic = DRPOS
+SkyboxScale = 16
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 125
+Hidden = True
+
+Level FT_LavaShelter
+LevelName = Lava Shelter
+NoVisitNeeded = True
+NoZone = True
+TypeOfLevel = Race
+NumLaps = 3
+Music = LAVSH
+PositionMusic = SHDPOS
+SkyboxScale = 16
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 135
+Hidden = True
+
+Level FT_AquariumPark
+LevelName = Aquarium
+ZoneTitle = Park
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 2
+Music = AQPA
+SkyboxScale = 8
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 135
+Hidden = True
+
+Level FT_AsteroidCoaster
+LevelName = Asteroid
+ZoneTitle = Coaster
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 3
+Music = ASTC
+SkyboxScale = 8
+MObjscale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Hidden = True
+

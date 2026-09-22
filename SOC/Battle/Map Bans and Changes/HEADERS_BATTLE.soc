@@ -1,0 +1,808 @@
+#########################
+# 	   Battle Mode 		#
+#########################
+
+##################
+# Special Levels #
+##################
+
+Level RR_DuelBuster
+LevelName = Duel Busters
+NoZone = False
+NoVisitNeeded = True
+TypeOfLevel = Battle
+SkyTexture = TETRSK01
+Mobjscale = 1*FRACUNIT/4
+Music = DUSAZ,DUSAA
+LobbySize = Medium
+
+############
+# Ring Cup #
+############
+
+Level RR_MunicipalMeadow
+NoVisitNeeded = True
+LevelName = Municipal Meadow
+TypeOfLevel = Battle
+Music = MUMEZ
+SkyTexture = SKYCE
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+Followers = Flicky,Red Flicky,Pink Flicky,Green Flicky
+LobbySize = Medium
+
+Level RR_CDSpecialStage1
+NoVisitNeeded = True
+LevelName = CD Special
+ZoneTitle = Stage
+Act = 1
+TypeOfLevel = Battle
+SkyTexture = SKYCDSSA
+Music = CDSPZ1,CDSPJ
+MobjScale = FRACUNIT/2
+LobbySize = Medium
+CameraHeight = 140
+
+###############
+# Sneaker Cup #
+###############
+
+Level RR_TinkerersArena
+LevelName = Tinkerer's Arena
+TypeOfLevel = Battle
+SkyTexture = SKYTINKR
+Music = TIARZ
+MobjScale = FRACUNIT/4
+SkyboxScale = 6
+Followers = Motobuddy,Nebula
+LobbySize = Medium
+
+Level RR_TricircleMarina
+LevelName = Tricircle Marina
+TypeOfLevel = Battle
+SkyTexture = SKYEC
+Music = TRMAZ
+MobjScale = FRACUNIT/4
+Followers = Red Flicky,Pink Flicky,Green Flicky
+LightContrast = 38
+LightAngle = 45
+LobbySize = Medium
+
+##############
+# Spring Cup #
+##############
+
+Level RR_MysteryGate
+LevelName = Mystery Gate
+TypeOfLevel = Battle
+Music = MYGAZ
+SkyTexture = SKY4568
+MobjScale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Followers = Bubbles,Kabasira
+LobbySize = Medium
+
+Level RR_RustyRig
+LevelName = Rusty Rig
+TypeOfLevel = Battle
+SkyTexture = RIGSKY
+Music = RURGZ,RURGA
+MobjScale = FRACUNIT/5
+Followers = Aquis,Octus
+LobbySize = Medium
+
+###############
+# Barrier Cup #
+###############
+
+Level RR_MarbleFoyer
+LevelName = Marble Foyer
+TypeOfLevel = Battle
+MobjScale =  1*FRACUNIT/4
+SkyTexture = ~029
+Music = MAFOZ,MAFOA
+Followers = Bat,Ga
+LobbySize = Medium
+
+Level RR_RockWorld
+LevelName = Rock World
+TypeOfLevel = Battle
+Music = RKWLDZ
+SkyTexture = RWSKY
+MobjScale = FRACUNIT/4
+Weather = PRECIP_SNOW
+LightAngle = 45
+LightContrast = 64
+Followers = Puffin,Dove
+LobbySize = Medium
+
+#####################
+# Invincibility Cup #
+#####################
+
+Level RR_World1Map
+Levelname = World 1 Map
+NoZone = true
+TypeOfLevel = Battle
+SkyTexture = ~155
+MobjScale =  1*FRACUNIT/4
+Music = WOON
+Followers = Ticktock,Gotcha,Bushbubble,Piranhy
+LobbySize = Medium
+
+Level RR_CDSpecialStage8
+LevelName = CD Special
+ZoneTitle = Stage
+Act = 8
+TypeOfLevel = Battle
+MobjScale = 4*FRACUNIT/10
+Music = CDSPJ,CDSPZ1
+SkyTexture = ~152
+LobbySize = Medium
+CameraHeight = 140
+
+###############
+# Emerald Cup #
+###############
+
+Level RR_SEGASaturn
+LevelName = SEGA
+ZoneTitle = Saturn
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = FRACUNIT*20/100
+SkyboxScale = 128
+SkyTexture = ~029
+PositionMusic = SATBOT
+Music = SESA
+Followers = Flicky,Red Flicky,Pink Flicky,Green Flicky
+LobbySize = Medium
+
+Level RR_ElectraClacker
+LevelName = Electra Clacker
+TypeOfLevel = Battle
+Music = ELCLZ
+SkyTexture = SKY4240
+MobjScale = FRACUNIT/2
+SkyboxScale = 32
+Followers = Gotcha,Motorspike
+LobbySize = Medium
+
+#############
+# Extra Cup #
+#############
+
+Level RR_ThunderTop
+LevelName = Thunder Top
+TypeOfLevel = Battle
+Music = THTOZ
+SkyTexture = SKY1259
+MobjScale = FRACUNIT/4
+SkyboxScale = 32
+LightContrast = 100
+LightAngle = 345
+Weather = PRECIP_ELECTRICITY
+Followers = Flasher,Hotaru
+LobbySize = Medium
+
+Level RR_TreeRing
+LevelName = Tree Ring
+TypeOfLevel = Battle
+SkyTexture = SKYEC
+Music = TRRIZ
+MobjScale = FRACUNIT/4
+LightContrast = 48
+LightAngle = 45
+Weather = PRECIP_POLLEN
+Followers = Flicky,Clucky
+LobbySize = Medium
+
+###########
+# SPB Cup #
+###########
+
+Level RR_FrigidCove
+LevelName = Frigid Cove
+TypeOfLevel = Battle
+SkyTexture = GC_SKY
+Music = FRCVZ
+MobjScale = FRACUNIT/5
+LightContrast = 24
+LightAngle = 110
+Followers = Snowman
+LobbySize = Medium
+
+Level RR_GizmoBastion
+LevelName = Gizmo Bastion
+TypeOfLevel = Battle
+Music = GZBSTZ
+SkyTexture = ~139
+MobjScale = FRACUNIT/4
+LightAngle = 45
+LightContrast = 64
+SkyBoxScale = 32
+Followers = Meramora Jr,Technosqueek
+LobbySize = Medium
+
+##############
+# Rocket Cup #
+##############
+
+Level RR_CarbonCrucible
+LevelName = Carbon Crucible
+TypeOfLevel = Battle
+Music = CACRZ
+SkyTexture = SKY4239
+MobjScale = FRACUNIT/2
+Followers = Sol,Firefly
+LobbySize = Medium
+
+Level RR_SecurityHall
+LevelName = Security
+ZoneTitle = Hall
+TypeOfLevel = BATTLE
+Music = SCHAZ
+SkyTexture = ~031
+MobjScale = FRACUNIT/3
+Followers = Chaos Drive
+LobbySize = Medium
+hidden = true
+
+############
+# Aqua Cup #
+############
+
+Level RR_GemsMuseum
+LevelName = Gems Museum
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = FRACUNIT*30/100
+SkyTexture = ~137
+SkyboxScaleZ = 0
+Music = GEMUZ
+Followers = Mosqui,Anton
+LobbySize = Medium
+
+Level RR_MediaStudio
+LevelName = Media
+ZoneTitle = Studio
+TypeOfLevel = Battle
+Music = MESTU
+SkyTexture = MSSTARS
+MobjScale = FRACUNIT/4
+LightAngle = 270
+LightContrast = 80
+Followers = Bacura
+LobbySize = Medium
+hidden = true
+
+#################
+# Lightning Cup #
+#################
+
+Level RR_HoneycombHollow
+LevelName = Honeycomb Hollow
+TypeOfLevel = Battle
+Music = HOHOZ
+SkyTexture = SKY2445
+SkyboxScaleX = 32
+MobjScale = FRACUNIT/2
+Followers = Poh-Bee,Buzz Bomber,Scouter
+LobbySize = Medium
+
+Level RR_Wood
+LevelName = Wood
+TypeOfLevel = Battle
+Music = WOODZ,MEMETZ
+SkyTexture = SKYWOOD
+MobjScale = FRACUNIT/4
+LightContrast = 32
+LightAngle = 45
+Followers = Bushbubble,Burboom,Splats
+LobbySize = Medium
+
+#############
+# Flame Cup #
+#############
+
+Level RR_BrawlFort
+LevelName = Brawl Fort
+TypeOfLevel = Battle
+Music = BAFOZ
+SkyTexture = SKYBFORT
+MobjScale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Followers = Sol,Orbinaut
+LobbySize = Medium
+
+Level RR_CrystalIsland
+LevelName = Crystal Island
+TypeOfLevel = Battle
+Music = CRISZ
+SkyTexture = SKY7406
+Weather = PRECIP_SNOW
+MobjScale = FRACUNIT/2
+LightContrast = 64
+LightAngle = 45
+Followers = Glyph
+LobbySize = Medium
+
+#############
+# Super Cup #
+#############
+
+Level RR_CyberArena
+LevelName = Cyber Arena
+TypeOfLevel = Battle
+Hidden = False
+MobjScale =  1*FRACUNIT/4
+SkyTexture = ~029
+Music = CYARZ,CYARA
+Followers = C.H.R.O.M.E.,Technosqueek
+LobbySize = Medium
+
+Level RR_NeonResort
+LevelName = Neon Resort
+TypeOfLevel = Battle
+Music = NERSZ
+SkyTexture = CSBSKY01
+MobjScale = FRACUNIT/5
+SkyboxScale = 32
+Followers = Balloon
+LobbySize = Medium
+hidden = true
+
+###########
+# Egg Cup #
+###########
+
+Level RR_MeteorHerd
+LevelName = Meteor
+ZoneTitle = Herd
+TypeOfLevel = Battle
+Music = METHZ
+SkyTexture = MTHSKY
+MobjScale = FRACUNIT/3
+SkyboxScale = 96
+LightContrast = 48
+LightAngle = 45
+Followers = Chaos Drive
+LobbySize = Medium
+hidden = true
+
+Level RR_DeathEggsEye
+Levelname = Death Egg's
+ZoneTitle = Eye
+TypeOfLevel = Battle
+SkyTexture = ~029
+MobjScale =  3*FRACUNIT/10
+Music = DEEG
+Followers = Spikebonker,Chainspike
+LobbySize = Medium
+
+###############
+# Goggles Cup #
+###############
+
+Level RR_TailsLab
+LevelName = Tails' Lab
+NoZone = true
+TypeOfLevel = Battle
+Music = TALA
+MobjScale = 1*FRACUNIT/2
+LightAngle = 125
+LightContrast = 38
+Followers = Spinner,Whirl,Nebula,Bombaberry
+LobbySize = Medium
+hidden = true
+
+Level RR_PowerPlant
+LevelName = Power
+ZoneTitle = Plant
+TypeOfLevel = Battle
+Music = POPLZ
+SkyTexture = CGZSKY01
+SkyBoxScale = 2
+MobjScale = FRACUNIT/3
+Followers = Egg Flapper,Klagen
+LobbySize = Medium
+hidden = true
+
+#############
+# Timer Cup #
+#############
+
+Level RR_CitySkyline
+LevelName = City Skyline
+TypeOfLevel = Battle
+SkyTexture = ACZSKY2
+SkyboxScaleZ = 64
+MobjScale =  1*FRACUNIT/4
+Music = CISKZ
+Followers = Kabasira,Hotaru
+LobbySize = Medium
+hidden = true
+
+Level RR_VantablackAtrium
+LevelName = Vantablack Atrium
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = 1*FRACUNIT/3
+SkyTexture = ~029
+Music = VAATZ
+Followers = Attack Boo,Boo
+LobbySize = Medium
+
+############
+# Grow Cup #
+############
+
+Level RR_DeadSimple
+LevelName = Dead
+ZoneTitle = Simple
+TypeOfLevel = Battle
+Music = DESI,DESIA
+SkyTexture = SKY2447
+MobjScale = FRACUNIT/3
+Followers = Cacodemon
+LobbySize = Medium
+
+Level RR_MartianMatrix
+LevelName = Martian Matrix
+TypeOfLevel = Battle
+SkyTexture = WSSKY
+MobjScale = FRACUNIT/6
+Music = MAMAZ
+Followers = Bomber,Spinner
+LobbySize = Medium
+
+############
+# Chao Cup #
+############
+
+Level RR_DarkChaoGarden
+LevelName = Dark Chao
+ZoneTitle = Garden
+TypeOfLevel = Battle
+Music = DCHGA
+SkyTexture = DCGSKY
+MobjScale = FRACUNIT/4
+SkyboxScale = 8
+LightAngle = 270
+LightContrast = 80
+Followers = Bat,Dark Chao
+LobbySize = Medium
+hidden = true
+
+Level RR_HeroChaoGarden
+LevelName = Hero Chao
+ZoneTitle = Garden
+TypeOfLevel = Battle
+SkyTexture = HCGSKY
+Music = HCHGA
+MobjScale = FRACUNIT/4
+LightAngle = 270
+LightContrast = 32
+SkyboxScale = 4
+Followers = Dove,Hero Chao
+LobbySize = Medium
+
+############
+# Wing Cup #
+############
+
+Level RR_WhirlWaters
+LevelName = Whirl Waters
+TypeOfLevel = Battle
+Music = WHWAZ
+SkyTexture = SKY4644
+Palette = 19
+MobjScale = FRACUNIT/2
+Followers = Fish,Hermit Crab
+LobbySize = Medium
+
+Level RR_DelugedMetroplex
+LevelName = Deluged Metroplex
+TypeOfLevel = Battle
+Hidden = False
+Weather = PRECIP_RAIN
+MobjScale = FRACUNIT*3/10
+SkyTexture = ~029
+Music = DEMEZ
+Followers = Buggernaut,Spinner
+LobbySize = Medium
+
+############
+# Mega Cup #
+############
+
+Level RR_MegaEmeraldBeach
+LevelName = Mega Emerald
+ZoneTitle = Beach
+TypeOfLevel = Battle
+Music = MEEMZ
+SkyTexture = EMBSKY01
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+Followers = Hermit Crab
+LobbySize = Medium
+CameraHeight = 140
+
+Level RR_MegaLabyrinth
+LevelName = Mega Labyrinth
+TypeOfLevel = Battle
+Music = MELAZ
+SkyTexture = ~031
+MobjScale = FRACUNIT/4
+LightContrast = 48
+LightAngle = 45
+Followers = Jaws,Orbinaut
+LobbySize = Medium
+CameraHeight = 140
+
+###############
+# Phantom Cup #
+###############
+
+Level RR_FungalDimension
+LevelName = Fungal
+ZoneTitle = Dimension
+TypeOfLevel = Battle
+SkyTexture = SKYEC
+Music = DIHEZ1
+MobjScale = FRACUNIT/4
+Followers = Mushmeanie
+LobbySize = Medium
+CameraHeight = 130
+hidden = true
+
+Level RR_AstralDimension
+LevelName = Astral
+ZoneTitle = Dimension
+TypeOfLevel = Battle
+SkyTexture = SKYEC
+Music = DIHEZ1
+MobjScale = FRACUNIT/4
+Followers = Jellygnite,Octus
+LobbySize = Medium
+CameraHeight = 140
+hidden = true
+
+#############
+# Flash Cup #
+#############
+
+Level RR_ChaosSeraph
+LevelName = Chaos Seraph
+TypeOfLevel = Battle
+Music = CHSEZ
+SkyTexture = S1SLZSKY
+MobjScale = FRACUNIT/5
+LightContrast = 64
+LightAngle = 45
+Followers = Hint Orb
+LobbySize = Medium
+
+Level RR_ToyKingdom
+LevelName = Toy Kingdom
+TypeOfLevel = Battle
+Hidden = False
+MobjScale =  1*FRACUNIT/4
+SkyTexture = ~162
+Music = TOKIZ
+Followers = Balloon,Motobricks
+LobbySize = Medium
+
+############
+# Swap Cup #
+############
+
+Level RR_AquaticCathedral1
+LevelName = Aquatic Cathedral
+Act = 1
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = FRACUNIT*40/100
+SkyTexture = ~029
+Music = AQCAZ1
+Followers = Mecha Hiyoko,Piranhy
+LobbySize = Medium
+
+Level RR_AquaticCathedral2
+LevelName = Aquatic Cathedral
+Act = 2
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = FRACUNIT*40/100
+SkyTexture = ~029
+Weather = PRECIP_RAIN
+Music = AQCAZ2
+Followers = Mecha Hiyoko,Tridentz
+LobbySize = Medium
+
+##############
+# Shrink Cup #
+##############
+
+Level RR_FrostyCourtyard
+LevelName = Frosty Courtyard
+TypeOfLevel = Battle
+Hidden = False
+Weather = PRECIP_SNOW
+MobjScale =  1*FRACUNIT/4
+SkyTexture = ~054
+Music = FRCOZ
+LightContrast = 40
+LightAngle = 90
+Followers = Snowman,Spidal Tap
+LobbySize = Medium
+hidden = true
+
+Level RR_AbyssGate
+LevelName = Abyss Gate
+TypeOfLevel = Battle
+Hidden = False
+MobjScale =  27*FRACUNIT/100
+SkyTexture = ~065
+Music = ABGTZ
+Followers = Aquis,Tonbo,Asteron
+LobbySize = Medium
+hidden = true
+
+############
+# Bomb Cup #
+############
+
+Level RR_SonicsSchoolhouse
+LevelName = Sonic's
+ZoneTitle = Schoolhouse
+TypeOfLevel = Battle
+Hidden = False
+MobjScale = FRACUNIT*32/100
+SkyTexture = LSZSKY
+Music = SOSC
+Followers = Flicky,Red Flicky,Pink Flicky,Green Flicky
+LobbySize = Medium
+
+Level RR_RecordAttack
+LevelName = Record Attack
+TypeOfLevel = Battle
+Music = REATZ
+SkyTexture = SKYRAZ
+SkyboxScaleX = 16
+MobjScale = FRACUNIT/4
+LightContrast = 64
+LightAngle = 45
+Followers = Splats,Bata-pyon
+LobbySize = Medium
+
+#############
+# Power Cup #
+#############
+
+Level RR_PeanutPalace
+LevelName = Peanut Palace
+TypeOfLevel = Battle
+Hidden = False
+MobjScale =  30*FRACUNIT/100
+SkyboxScale = 128
+SkyTexture = ~132
+Music = PEPAZ
+Followers = Motobuddy,Mukaka
+LobbySize = Medium
+
+Level RR_HydroPlant
+LevelName = Hydro Plant
+TypeOfLevel = Battle
+Music = HYPLZ
+SkyTexture = HYPLSKY
+MobjScale = FRACUNIT/4
+LightAngle = 270
+LightContrast = 64
+Weather = PRECIP_NDZ
+Followers = Piranhy,Jetarang,Bubbler's Mother
+LobbySize = Medium
+hidden = true
+
+###############
+# Genesis Cup #
+###############
+
+Level RR_MegaMetropolis
+LevelName = Mega Metropolis
+TypeOfLevel = Battle
+Music = MEMETZ
+SkyTexture = MMETSKY1
+MobjScale = FRACUNIT/4
+LightAngle = 45
+LightContrast = 64
+Followers = Asteron
+LobbySize = Medium
+CameraHeight = 140
+
+Level RR_MegaMarble
+LevelName = Mega Marble
+TypeOfLevel = Battle
+Music = MMARBZ
+SkyTexture = MMBSKY
+MobjScale = FRACUNIT/5
+Followers = Marble UAP
+LobbySize = Medium
+CameraHeight = 140
+hidden = true
+
+#############
+# Skate Cup #
+#############
+
+Level RR_ThunderLab
+LevelName = Thunder Lab
+TypeOfLevel = Battle
+Hidden = False
+Weather = PRECIP_MONSOON
+MobjScale = FRACUNIT*3/10
+SkyTexture = TPSSKYT
+Music = THLAZ
+Followers = Gyro,Cappy
+LobbySize = Medium
+
+Level RR_MalignEggshrine
+LevelName = Malign Eggshrine
+TypeOfLevel = Battle
+SkyTexture = MESKY0
+Music = MLGNZ
+MobjScale = FRACUNIT/4
+LightAngle = 0
+LightContrast = 80
+Followers = Tonbo,Burboom
+LobbySize = Medium
+
+#################
+# Recycle A Cup #
+#################
+
+Level RR_SRB2MeadowMatch
+LevelName = SRB2 Meadow
+ZoneTitle = Match
+TypeOfLevel = Battle
+Music = MEMAZ
+SkyTexture = SKY1
+Hidden = False
+Followers = SRB1 Crawla,SRB2 Crawla
+LobbySize = Medium
+hidden = true
+
+Level RR_ArmoredArmadillo
+LevelName = Armored
+ZoneTitle = Armadillo
+TypeOfLevel = Battle
+Music = ARARZ
+SkyTexture = SKY91
+Followers = Tridrill,Bomb,Balldron
+LobbySize = Medium
+MobjScale = FRACUNIT/2
+
+#################
+# Recycle B Cup #
+#################
+
+Level RR_CluckyFarms
+LevelName = Clucky Farms
+TypeOfLevel = Battle
+SkyTexture = SKY2002
+Music = CLFAZ
+Followers = Clucky
+LobbySize = Medium
+MobjScale = 11*FRACUNIT/20
+
+Level RR_DriedBattledune
+LevelName = Dried Battledune
+TypeOfLevel = Battle
+#Palette = 77
+SkyTexture = SKY4733
+Music = DRBAZ
+Followers = Frogger,Newtron
+LobbySize = Medium
+MobjScale = 11*FRACUNIT/20

@@ -1,0 +1,111 @@
+Level DRTR_BastionIsle
+LevelName = Bastion Isle
+TypeOfLevel = Race
+NumLaps = 3
+Music = BSTILE
+MobjScale = FRACUNIT/4
+SkyTexture = STRSKY01
+LightContrast = 24
+
+Level DRTR_SunkenRemnant
+LevelName = Sunken Remnant
+TypeOfLevel = Race
+NumLaps = 4
+Music = KMAPL6
+MobjScale = FRACUNIT*50/100
+SkyTexture = SKY4887
+LightContrast = 24
+hidden = true
+
+Level DRTR_PerilPagoda
+LevelName = Peril Pagoda
+TypeOfLevel = Battle
+Music = PPGODA
+MobjScale = FRACUNIT/4
+SkyTexture = PPGDSKY1
+NoVisitNeeded = True
+LobbySize = Medium
+
+Level DRTR_OceanHighrise
+LevelName = Ocean Highrise
+TypeOfLevel = Battle
+Music = OCNHGR
+MobjScale = FRACUNIT/4
+SkyTexture = OCHGSKY1
+SkyboxScale = 8
+LobbySize = Small
+
+Level DRTR_AfterhourAlcazar
+LevelName = Afterhour Alcazar
+TypeOfLevel = Race,Battle
+NumLaps = 3
+Music = AFALZR
+MobjScale = FRACUNIT/4
+SkyTexture = ~031
+LightContrast = 24
+SkyboxScale = 8
+Darkness = 0.5
+hidden = true
+
+Level DRTR_KodachromePalace
+LevelName = Kodachrome Palace
+TypeOfLevel = Race
+NumLaps = 3
+Music = KMAPLS
+MobjScale = FRACUNIT/4
+SkyTexture = ~031
+LightContrast = 24
+hidden = true
+
+Level DRTR_UnrealPlace
+MenuTitle = Unreal
+LevelName = Faraway Fantasy
+Act = 1
+NoZone = True
+SectionRace = True
+TypeOfLevel = Special
+MobjScale = 1*FRACUNIT/4
+SkyBoxScale = 0
+SkyTexture = SSSKY00
+NumLaps = 1
+LightAngle = 270
+Music = UNRLPL
+LightContrast = 80
+
+Level DRTR_LacustrineDisrepair
+LevelName = Lacustrine Disrepair
+TypeOfLevel = Race
+NumLaps = 4
+Act = 1
+Music = LCDSRP
+MobjScale = FRACUNIT/4
+SkyTexture = LCDSSKY1
+SkyboxScale = 8
+LightContrast = 24
+NoVisitNeeded = True
+hidden = true
+
+Level DRTR_LacustrineDisrepair2
+LevelName = Lacustrine Disrepair
+TypeOfLevel = Race
+NumLaps = 4
+Act = 2
+Music = LCDSR2
+MobjScale = FRACUNIT/4
+SkyTexture = ~110
+SkyboxScale = 8
+LightContrast = 24
+NoVisitNeeded = True
+hidden = true
+
+Level DRTR_HouseOfTheUndying
+LevelName = House Of
+ZoneTitle = The Undying
+TypeOfLevel = Race
+NumLaps = 3
+LapsPerSection = 1
+Music = UNDRBN,KMAPLQ
+MobjScale = FRACUNIT/4
+SkyTexture = ~031
+LightContrast = 24
+hidden = true

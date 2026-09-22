@@ -1,0 +1,95 @@
+Level LOG_SD2IronRuin
+NoVisitNeeded = True
+LevelName = Iron Ruin
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = IR-_SKY
+Music = LOGIR0
+MobjScale = FRACUNIT/8
+Darkness = 0.10
+Hidden = True
+
+Level LOG_ScorchedSanctuary
+NoVisitNeeded = True
+LevelName = Scorched Sanctuary
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = QQ_SKY
+Music = LOGQQ0
+MobjScale = FRACUNIT/4
+Darkness = 0.10
+LightAngle = 135
+LightContrast = 64
+Hidden = True
+
+Level LOG_ErodingEucalyptus
+NoVisitNeeded = True
+LevelName = Eroding Eucalyptus
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = EE_BOX1
+Music = LOGEE0,LOGEE1,LOGEE2
+MobjScale = FRACUNIT/4
+Darkness = 0.10
+Hidden = True
+
+Level LOG_SD2RainySavannah
+NoVisitNeeded = True
+LevelName = Rainy Savannah
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = RSZ_SKY
+Music = SD2RSZ
+CameraHeight = 140
+MobjScale = FRACUNIT/8
+SkyboxScale = 4
+Weather = PRECIP_MONSOON
+Darkness = 0.10
+Lua.AlwaysTrustWaypoints = true
+Hidden = True
+
+Level LOG_CRYSTALINESCAFFHOLD
+NoVisitNeeded = True
+LevelName = Crystaline Scaffold
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = TETRSK01
+Music = LOGCSZ
+MobjScale = FRACUNIT/4
+SkyboxScale = 4
+Darkness = 0.10
+Hidden = True
+
+Level LOG_Mementos
+LevelName = Path of
+ZoneTitle = Qimranut
+TypeOfLevel = Race
+SkyTexture = ~031
+NumLaps = 3
+Music = LOGMM0
+MobjScale = FRACUNIT/4
+HIdden = True
+
+Level LOG_EggZeppelin
+LevelName = Sky Base
+Act = 1
+NoVisitNeeded = True
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = SB1_SKYF
+Music = LOGSB0,LOGSB1
+MobjScale = FRACUNIT/4
+Darkness = 1.10
+Hidden = True
+
+Level LOG_GUMBALL
+NoVisitNeeded = True
+LevelName = Gumball Machine
+TypeOfLevel = Race,Battle
+NumLaps = 5
+SkyTexture = GB_SKY0
+Mobjscale = FRACUNIT/4
+Music = DOILUS
+Followers = Bubbles
+LobbySize = Large
+Hidden = True

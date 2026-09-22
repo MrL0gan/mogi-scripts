@@ -1,0 +1,947 @@
+Level RR_NorthernDistrict
+NoVisitNeeded = True
+LevelName = Northern District
+NoZone = False
+Weather = PRECIP_NDZ
+TypeOfLevel = Race
+SkyTexture = SKYNDZ
+Mobjscale = 1*FRACUNIT/4
+NumLaps = 4
+Music = NODIZ
+SkyboxScale = 16
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_510 = KITEM_DROPTARGET,1
+
+Level RR_EmeraldCoast
+LevelName = Emerald
+ZoneTitle = Coast
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = SKYEC
+Music = EMCOZ,EMCA1,EMCA2
+SkyboxScale = 32
+Mobjscale = FRACUNIT/4
+LightAngle = 135
+LightContrast = 64
+SubtractNum = True
+Lua.mogi_capsules = true
+Lua.mogicap_jawz = KITEM_JAWZ,1
+
+Level RR_StormRig
+LevelName = Storm Rig
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = STRSKY01
+Mobjscale = FRACUNIT*28/100
+LightAngle = 90
+LightContrast = 48
+Weather = PRECIP_STORMRIG
+Music = STRIZ,STRIZA
+DefaultWaypointRadius = 96*FRACUNIT
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_984 = KSM_RING
+Lua.mogicap_987 = KSM_RING
+Lua.mogicap_988 = KSM_SEVEN
+Lua.mogicap_1056 = KSM_JACKPOT
+Lua.mogicap_1044 = KSM_JACKPOT
+
+Level RR_CadillacCascade
+LevelName = Cadillac Cascade
+NoZone = False
+TypeOfLevel = Race
+SkyTexture = SKYCCAS
+Mobjscale = 1*FRACUNIT/4
+NumLaps = 3
+Music = CDCSZ,CDCSA
+EncorePal = 603
+Lua.mogi_capsules = true
+Lua.mogicap_533 = KITEM_SUPERRING,2
+Lua.mogicap_rocketsneaker = KITEM_SNEAKER,2
+
+Level RR_RoastedRuins
+LevelName = Roasted Ruins
+Music = RORUZ
+SkyboxScale = 64
+TypeOfLevel = Race
+NumLaps = 4
+SkyTexture = ~001
+LightContrast = 56
+LightAngle = 90
+SubtractNum = True
+Lua.mogi_capsules = true
+Lua.mogicap_969 = KITEM_BANANA,1
+
+Level RR_MarbleGarden
+LevelName = Marble Garden
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = MGZSKY
+Music = MAGRZ,MAGRZ2,MAGRA
+MobjScale = FRACUNIT/4
+LightContrast = 48
+LightAngle = 225
+Lua.mogi_capsules = true
+Lua.mogicap_flameshield = KSM_JACKPOT
+Lua.mogicap_lightningshield = KITEM_SUPERRING
+Lua.mogicap_48 = KITEM_LIGHTNINGSHIELD
+
+Level RR_LaunchBase
+LevelName = Launch Base
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~150
+Weather = PRECIP_SUNDAEDRIVE
+Music = LABAZ1,LABAA1,LABAA2
+MobjScale = FRACUNIT/4
+Lua.mogi_capsules = true
+Lua.mogicap_277 = KITEM_ORBINAUT,2
+Lua.mogicap_606 = KITEM_ORBINAUT,2
+Lua.mogicap_607 = KITEM_ORBINAUT,2
+
+Level RR_CityEscape
+LevelName = City
+ZoneTitle = Escape
+TypeOfLevel = Race
+SectionRace = True
+NumLaps = 1
+SkyTexture = SKYCE
+PositionMusic = CITINT
+Music = CIESZ,SEV
+Mobjscale = FRACUNIT*29/100
+LightContrast = 64
+LightAngle = 45
+Lua.mogi_capsules = true
+Lua.mogicap_rocketsneaker = KITEM_SNEAKER,1
+Lua.mogicap_spb = KSM_JACKPOT
+
+Level RR_SpeedHighway
+LevelName = Speed
+ZoneTitle = Highway
+TypeOfLevel = Race
+NumLaps = 1
+SkyTexture = SHSKY01
+MobjScale = FRACUNIT/4
+Music = SPHIZ,SPHIZA
+AssociatedMusic = SHDOWN
+DefaultWaypointRadius = 208*FRACUNIT
+Palette = 7681
+LightAngle = 45
+LightContrast = 24
+Darkness = -1
+SectionRace = True
+Lua.mogi_capsules = true
+Lua.mogicap_SPB = KSM_JACKPOT
+Lua.mogicap_jawz = KITEM_JAWZ,1
+Lua.mogicap_70 = POWERUP_SUPERFLICKY,67
+
+Level RR_Route1980
+LevelName = Route 1980
+TypeOfLevel = Race
+NumLaps = 1
+SkyTexture = SYNSKY
+Mobjscale = FRACUNIT/4
+SkyboxScaleX = 0
+SkyboxScaleY = 0
+SkyboxScaleZ = 4
+LightAngle = 135
+LightContrast = 32
+Music = SYNPIK
+DefaultWaypointRadius = 208*FRACUNIT 
+SectionRace = True
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_ORBINAUT,1
+Lua.mogicap_ballhog = KITEM_BALLHOG,1
+Lua.mogicap_3562 = KITEM_BALLHOG,1
+
+Level RR_DarkFortress
+LevelName = Dark Fortress
+TypeOfLevel = Race
+NumLaps = 2
+SkyTexture = SKY88
+Music = UMRUZ,DAFOA
+MobjScale = FRACUNIT/4
+SkyboxScale = 6
+LightAngle = 135
+LightContrast = 64
+Lua.mogi_capsules = true
+Lua.mogicap_rocketsneaker = KITEM_SNEAKER,1
+Lua.mogicap_mine = KITEM_MINE,1
+Lua.mogicap_jawz = KITEM_JAWZ,1
+Lua.mogicap_170 = KITEM_ORBINAUT,2
+Lua.mogicap_939 = KITEM_BANANA,1
+
+Level RR_Labyrinth
+LevelName = Labyrinth
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = SKYLB01
+Music = LABZ
+Mobjscale = FRACUNIT*26/100
+Lua.mogi_capsules = true
+Lua.mogicap_813 = KSM_JACKPOT
+Lua.mogicap_823 = KITEM_LANDMINE,1
+
+Level RR_GreenTriangle
+LevelName = Green Triangle
+Music = GRTRZ
+NumLaps = 7
+SkyTexture = ~031
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+Lua.mogi_capsules = true
+Lua.mogicap_jawz = KITEM_JAWZ,1
+Lua.mogicap_235 = KITEM_SUPERRING,2
+
+Level RR_DaytonaSpeedway
+LevelName = Daytona Speedway
+TypeOfLevel = Race
+NumLaps = 4
+SkyTexture = DTSSKY01
+Music = DASPZ,DASPZA
+Mobjscale = FRACUNIT*80/100
+LightContrast = 48
+LightAngle = 315
+Lua.mogi_capsules = true
+Lua.mogicap_1135 = KSM_JACKPOT
+Lua.mogicap_1128 = KITEM_ORBINAUT,2
+
+Level RR_HanagumiHall
+LevelName = Hanagumi Hall
+TypeOfLevel = Race
+NumLaps = 5
+MobjScale = FRACUNIT*25/100
+PositionMusic = SAKVIC
+Music = HAHLZ
+SkyTexture = SKYSW
+Weather = PRECIP_HGPB
+DefaultWaypointRadius = 208*FRACUNIT
+SkyboxScale = 4
+LightAngle = 45
+LightContrast = 48
+Lua.mogi_capsules = true
+Lua.mogicap_43 = KITEM_JAWZ,1
+
+Level RR_OperatorsOverspace
+LevelName = Operator's
+ZoneTitle = Overspace
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = 1*FRACUNIT/4
+SkyTexture = ~029
+SkyboxScale = 32
+Music = OPOV
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_ORBINAUT,1
+Lua.mogicap_2251 = KITEM_SNEAKER,2
+
+Level RR_QuartzQuadrant
+LevelNAME = Quartz Quadrant
+TypeOfLevel = RACE
+SkyTexture = SKYQQ
+NumLaps = 3
+SKYBOXSCALEZ = 4
+Music = QUQUZ,QUQUA
+Darkness = 0.25
+Act = 1
+Lua.mogi_capsules = true
+Lua.mogicap_1209 = KITEM_JAWZ,2
+
+Level RR_MonkeyMall
+LevelName = Monkey
+ZoneTitle = Mall
+Palette = 18
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = SKY4561
+Music = MOMLZ,MOMLA
+MobjScale = 4*FRACUNIT/5
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_banana = KITEM_BANANA,1
+
+Level RR_RampPark
+LevelName = Ramp Park
+TypeOfLevel = Race
+NumLaps = 2
+MobjScale = FRACUNIT/4
+Music = RAPAZ
+SkyTexture = RPSKYTX
+LightContrast = 32
+LightAngle = 45
+Darkness = 0.25
+Lua.mogi_capsules = true
+Lua.mogicap_rocketsneaker = KSM_JACKPOT
+Lua.mogicap_sneaker = KITEM_SNEAKER,1
+Lua.mogicap_banana = KITEM_BANANA,1
+
+Level RR_CrimsonCore
+LevelName = Crimson Core
+TypeOfLevel = Race
+Music = CRCOZ,CRCO1
+NumLaps = 3
+SkyTexture = CRIMSKY
+MobjScale = FRACUNIT/4
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_mine = KITEM_MINE,1
+Lua.mogicap_2 = KITEM_JAWZ,1
+Lua.mogicap_807 = KITEM_BANANA,1
+Lua.mogicap_234 = KITEM_BANANA,1
+
+#Capsule Wave 2
+
+Level RR_PanicCity
+NoVisitNeeded = True
+LevelName = Panic City
+TypeOfLevel = Race
+NumLaps = 4
+SkyTexture = PCKSKYBG
+Mobjscale = 1*FRACUNIT/4
+Music = PACIZ
+Lua.mogi_capsules = true
+Lua.mogicap_630 = KITEM_JAWZ,1
+Lua.mogicap_MINE = KSM_RING
+
+Level RR_GreenHills
+LevelName = Green Hills
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~137
+SkyBoxScale = 32
+Music = GRHIZ
+Mobjscale = FRACUNIT/4
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_ORBINAUT,1
+
+Level RR_AutumnRing
+LevelName = Autumn Ring
+NoZone = 0
+TypeOfLevel = Race
+NumLaps = 3
+SkyTEXTURE = ~050
+Mobjscale = FRACUNIT/4
+Palette = 603
+Music = AURIZ
+LightContrast = 32
+LightAngle = 315
+Lua.mogi_capsules = true
+Lua.mogicap_469 = KITEM_ORBINAUT,1
+
+Level RR_WitheringChateau
+LevelName = Withering Chateau
+TypeOfLevel = Race
+SkyTexture = WCZSKY
+Mobjscale = 1*FRACUNIT/4
+NumLaps = 3
+Music = WCMZ
+Weather = PRECIP_FIREFLIES
+SkyboxScale = 4
+LightAngle = -45
+LightContrast = 56
+Darkness = 0.75
+Lua.mogi_capsules = true
+Lua.mogicap_1289 = KITEM_ORBINAUT,2
+
+Level RR_SundaeDrive
+LevelName = Sundae Drive
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = SKYSUND
+SkyboxScale = 64
+Weather = PRECIP_SUNDAEDRIVE
+Music = SUDRZ
+Mobjscale = FRACUNIT*80/100
+Darkness = 0.25
+Lua.mogi_capsules = true
+Lua.mogicap_8 = KITEM_JAWZ,1
+
+Level RR_RumbleRidge
+LevelName = Rumble Ridge
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~134
+Music = RURIZ
+Mobjscale = FRACUNIT/4
+Palette = 8393
+EncorePal = 3
+LightContrast = 24
+LightAngle = 155
+Lua.mogi_capsules = true
+Lua.mogicap_landmine = KITEM_BANANA,2
+
+Level RR_Opulence
+LevelName = Opulence
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~254
+Music = OPUZ
+Mobjscale = FRACUNIT*25/100
+LightAngle = 50
+LightContrast = 56
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_ORBINAUT,1
+
+Level RR_MirageSaloon
+LevelName = Mirage Saloon
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = MSZSKY
+Music = MISAZ,MISA2Z,MISAKZ
+Mobjscale = FRACUNIT/4
+SkyboxScale = 32*FRACUNIT
+DefaultWaypointRadius = 192*FRACUNIT
+Lua.mogi_capsules = true
+Lua.mogicap_190 = KITEM_SUPERRING,6
+Lua.mogicap_420 = KITEM_BANANA,2
+Lua.mogicap_238 = KITEM_BANANA,2
+Lua.mogicap_190 = KITEM_SUPERRING,6
+Lua.mogicap_589 = KITEM_BANANA,1
+Lua.mogicap_575 = KITEM_BANANA,1
+
+Level RR_HauntedShip
+LevelName = Haunted Ship
+NoZone = True
+Music = HASHZ
+TypeOfLevel = RACE
+SkyTexture = ~029
+SkyboxScale = 4
+NumLaps = 3
+Weather = PRECIP_STORM
+Mobjscale = FRACUNIT/2
+LightAngle = 45
+LightContrast = 48
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_49 = KITEM_JAWZ,1
+
+Level RR_RegalRuin
+LevelName = Regal
+ZoneTitle = Ruin
+TypeOfLevel = Race
+Mobjscale = FRACUNIT*32/100
+SkyTexture = ~029
+NumLaps = 4
+PositionMusic = SRSTRA
+Music = RERUZ,RERUA,RERUA2
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_657 = KITEM_JAWZ,1
+
+Level RR_IsolatedIsland
+LevelName = Isolated Island
+TypeOfLevel = Race
+Hidden = False
+NumLaps = 3
+Mobjscale = 1*FRACUNIT/4
+SkyTexture = ~029
+SkyboxScaleZ = 0
+Music = ISILZ
+Darkness = 0.25
+Lua.mogi_capsules = true
+Lua.mogicap_18 = KITEM_HYUDORO,1
+Lua.mogicap_575 = KITEM_JAWZ,1
+
+Level RR_KodachromeVoid
+LevelName = Kodachrome Void
+TypeOfLevel = Race
+NumLaps = 4
+Music = KOVOZ
+Mobjscale = FRACUNIT*85/100
+Darkness = 0.5
+SkyTexture = ~031
+Lua.mogi_capsules = true
+Lua.mogicap_mine = KITEM_BANANA,1
+Lua.mogicap_landmine = KITEM_LANDMINE,1
+Lua.mogicap_jawz = KITEM_JAWZ,1
+Lua.mogicap_22 = KITEM_SUPERRING,3
+
+Level RR_DiamondDustClassic
+LevelName = Diamond Dust
+ZoneTitle = Classic
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = 1*FRACUNIT/4
+Weather = PRECIP_SNOW
+SkyTexture = DIASKY
+Music = DIDUZ,DIDUA
+SubtractNum = True
+Lua.mogi_capsules = true
+Lua.mogicap_863 = KITEM_BANANA,1
+
+Level RR_VirtualHighway
+LevelName = Virtual Highway
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~031
+Music = VIHIZ
+MobjScale = FRACUNIT/4
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_eggman = KITEM_BANANA,1
+
+Level RR_HiddenPalace
+LevelName = Hidden Palace
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = HPSKY1
+Music = HDPAZ
+SkyboxScale = 24
+MobjScale = FRACUNIT/4
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_776 = KITEM_JAWZ,1
+
+#wave 3 capsule changes. blame napwack if these dont work
+
+Level RR_IsolatedIsland
+LevelName = Isolated Island
+TypeOfLevel = Race
+Hidden = False
+NumLaps = 3
+Mobjscale = 1*FRACUNIT/4
+SkyTexture = ~029
+SkyboxScaleZ = 0
+Music = ISILZ
+Darkness = 0.25
+Lua.mogi_capsules = true
+Lua.mogicap_18 = KITEM_HYUDORO,1
+Lua.mogicap_792 = KITEM_JAWZ,1
+
+Level RR_BronzeLake
+LevelName = Bronze Lake
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = BRNZSKY
+Music = BRLAZ
+Mobjscale = FRACUNIT/3
+Palette = 20
+LightContrast = 64
+LightAngle = 225
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_ORBINAUT,2
+
+Level RR_MegaCollisionChaos
+LevelName = Mega Collision Chaos
+TypeOfLevel = Race
+Hidden = False
+NumLaps = 5
+MobjScale =  1*FRACUNIT/4
+SkyTexture = ~153
+Music = MECOZ,MECOA
+CameraHeight = 140
+Lua.mogi_capsules = true
+Lua.mogicap_996 = KITEM_SUPERRING,2
+
+Level RR_GustPlanet
+LevelName = Gust Planet
+TypeOfLevel = Race
+NumLaps = 3
+Mobjscale = FRACUNIT/4
+Music = GUPLZ,GUPAM1,GUPAM2
+SkyTexture = GUPSKY
+DefaultWaypointRadius = 208*FRACUNIT
+LightAngle = 45
+LightContrast = 64
+Lua.mogi_capsules = true
+Lua.mogicap_1026 = KITEM_JAWZ,1
+Lua.mogicap_1109 = KITEM_ORBINAUT,1
+
+Level RR_MysticCave
+LevelName = Mystic Cave
+TypeOfLevel = Race
+Mobjscale = FRACUNIT/4
+Music = MYCAZ,MYCAZ1,MYCAZ2
+Darkness = -1
+NumLaps = 4
+SkyTexture = MYSSKY
+Lua.mogi_capsules = true
+Lua.mogicap_137 = KCAPSULE_RING,2
+Lua.mogicap_422 = KCAPSULE_RING,2
+
+Level RR_Joypolis
+LevelName = Joypolis
+TypeOfLevel = Race
+NumLaps = 5
+MobjScale = FRACUNIT/4
+PositionMusic = JOYINT
+Music = JOYZ
+SkyTexture = SKYJP
+LightAngle = 45
+LightContrast = 32
+DestroyObjectsForChallenges = MT_JOYTABLE,MT_JOYCHAIR
+Lua.mogi_capsules = true
+Lua.mogicap_sneaker = KCAPSULE_RING,10
+
+Level RR_SilvercloudIsland
+LevelName = SilverCloud
+Zonetitle = Island
+TypeOfLevel = Race
+Mobjscale = FRACUNIT/4
+NumLaps = 3
+SkyTEXTURE = ~131
+Music = SIISZ
+SubtractNum = True
+Lua.mogi_capsules = true
+Lua.mogicap_983 = KITEM_BANANA,1
+Lua.mogicap_177 = KITEM_ORBINAUT,1
+
+Level RR_FrozenProduction
+LevelName = Frozen Production
+TypeOfLevel = Race
+MobjScale = 1*FRACUNIT/4
+Weather = PRECIP_BLIZZARD
+SkyboxScaleZ = 0
+MUSIC = FRPOZ,FRPOA
+SkyTexture = ~056
+NumLaps = 2
+SubtractNum = True
+Lua.mogi_capsules = true
+Lua.mogicap_1862 = KITEM_HYUDORO
+
+Level RR_AvantGarden
+LevelName = Avant Garden
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT*30/100
+Music = AVGAZ
+SkyTexture = SKYAGZX
+DefaultWaypointRadius = 208*FRACUNIT
+LightAngle = 135
+LightContrast = 32
+Lua.mogi_capsules = true
+Lua.mogicap_1792 = KITEM_JAWZ,1
+Lua.mogicap_1793 = KITEM_JAWZ,1
+
+Level RR_HardBoiledStadium
+LevelName = Hard-Boiled Stadium
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~031
+Music = HABIZ
+Mobjscale = FRACUNIT*40/100
+LightContrast = 32
+LightAngle = 135
+Darkness = -0.5
+Lua.mogi_capsules = true
+Lua.mogicap_837 = KITEM_ORBINAUT,1
+Lua.mogicap_839 = KITEM_ORBINAUT,2
+Lua.mogicap_888 = KITEM_BANANA,1
+
+Level RR_765Stadium
+LevelName = 765 Stadium
+TypeOfLevel = Race
+NumLaps = 5
+Mobjscale = FRACUNIT*30/100
+SkyTexture = SKY76501
+Weather = PRECIP_CONFETTI
+Music = 765STZ
+SkyboxScale = 8
+Lua.mogi_capsules = true
+Lua.mogicap_981 = KITEM_SUPERRING,1
+
+Level RR_PressGarden
+LevelName = Press Garden
+TypeOfLevel = Race
+NumLaps = 3
+SkyboxScale = 4
+SkyboxScaleX = 4
+SkyboxScaleY = 4
+SkyboxScaleZ = 4
+SkyTexture = ~132
+Music = PRGAZ
+Mobjscale = FRACUNIT*30/100
+Darkness = 0.5
+Lua.mogi_capsules = true
+Lua.mogicap_190 = KITEM_LIGHTNINGSHIELD,1
+Lua.mogicap_orbinaut = KITEM_JAWZ,1
+
+Level RR_StarLight
+LevelName = Star Light
+Music = STLIZ
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT/4
+SkyTexture = ~031
+Lua.mogi_capsules = true
+Lua.mogicap_1114 = KCAPSULE_RING,2
+Lua.mogicap_1116 = KCAPSULE_RING,2
+Lua.mogicap_1117 = KCAPSULE_RING,2
+Lua.mogicap_863 = KCAPSULE_RING,2
+Lua.mogicap_1115 = KITEM_JAWZ,1
+Lua.mogicap_1118 = KITEM_JAWZ,1
+
+Level RR_Metropolis
+LevelName = Metropolis
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT/4
+Music = METZ,METZA
+SkyTexture = SKY26541
+DefaultWaypointRadius = 208*FRACUNIT
+LightAngle = 45
+LightContrast = 64
+Lua.mogi_capsules = true
+Lua.mogicap_497 = KITEM_LANDMINE,1
+
+Level RR_AqueductCrystal
+LevelName = Aqueduct Crystal
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT/4
+SkyTexture = AQSKY0
+SkyBoxScale = 8
+Music = AQCRZ
+LightAngle = 0
+LightContrast = 80
+Lua.mogi_capsules = true
+Lua.mogicap_411 = KITEM_SAD,1
+Lua.mogicap_424 = KITEM_JAWZ,1
+Lua.mogicap_425 = KITEM_ORBINAUT,1
+
+Level RR_SavannahCitadel
+LevelName = Savannah
+ZoneTitle = Citadel
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT/4
+Music = SACIZ
+SkyTexture = SKYSCZ
+DefaultWaypointRadius = 208*FRACUNIT
+SkyboxScale = 10
+LightAngle = 150
+LightContrast = 72
+EncoreLightAngle = 330
+EncoreLightContrast = 8
+Lua.mogi_capsules = true
+Lua.mogicap_1221 = KITEM_ORBINAUT,1
+
+Level RR_BigtimeBreakdown
+LevelName = Bigtime Breakdown
+Music = BIBRZ
+TypeOfLevel = RACE
+NumLaps = 4
+MobjScale = FRACUNIT/4
+Darkness = .5
+SkyTexture = ~195
+Lua.mogi_capsules = true
+Lua.mogicap_banana = KITEM_BANANA,1
+
+Level RR_TurquoiseHill
+LevelName = Turquoise Hill
+TypeOfLevel = Race
+MobjScale = 1*FRACUNIT/4
+SkyboxScaleZ = 0
+NumLaps = 3
+LightContrast = 40
+LightAngle = 225
+Music = TUHIZ
+SkyTexture = TURHBG01
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KCAPSULE_RING,2
+
+Level RR_WeissWaterway
+LevelName = Weiss Waterway
+TypeOfLevel = Race
+NumLaps = 5
+MobjScale = 1*FRACUNIT/4
+SkyTexture = ~000
+SkyboxScale = 4
+Music = WEWAZ,WEWAA
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_JAWZ,1
+
+Level RR_AerialHighlands
+LevelName = Aerial Highlands
+Music = AEHIZ
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = ~163
+Lua.mogi_capsules = true
+Lua.mogicap_162 = KITEM_BANANA,1
+Lua.mogicap_337 = KITEM_BANANA,1
+Lua.mogicap_338 = KITEM_BANANA,1
+Lua.mogicap_190 = KITEM_BANANA,1
+Lua.mogicap_sneaker = KITEM_SNEAKER,1
+
+Level RR_TechnologyTundra
+LevelName = Technology
+ZoneTitle = Tundra
+TypeOfLevel = Race
+NumLaps = 2
+SkyTexture = TUNDSKY
+Music = TETUZ
+Weather = 2
+MobjScale = FRACUNIT/4
+LightContrast = 24
+LightAngle = 90
+Lua.mogi_capsules = true
+Lua.mogicap_569 = KITEM_BANANA,1
+Lua.mogicap_34 = KITEM_BANANA,1
+Lua.mogicap_567 = KITEM_BALLHOG,3
+
+Level RR_WavecrashDimension
+LevelName = Wavecrash
+ZoneTitle = Dimension
+TypeOfLevel = Race
+Act = 1
+NumLaps = 5
+SkyTexture = SKYLB01
+Music = DIHEZ3
+Mobjscale = FRACUNIT*23/100
+SkyboxScale = 8
+CameraHeight = 130
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KCAPSULE_RING,1
+Lua.mogicap_90 = KCAPSULE_RING,4
+Lua.mogicap_91 = KCAPSULE_RING,4
+Lua.mogicap_92 = KCAPSULE_RING,4
+Lua.mogicap_93 = KCAPSULE_RING,4
+
+Level RR_LakeMargorite
+LevelName = Lake Margorite
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+NumLaps = 3
+SkyTexture = ~147
+Music = LAMAZ
+Lua.mogi_capsules = true
+Lua.mogicap_orbinaut = KITEM_JAWZ,1
+
+Level RR_FinalFall
+LevelName = Final Fall
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = SKYFFZ
+MobjScale = FRACUNIT/4
+SkyboxScaleZ = 16
+Music = FIFAZ
+Lua.mogi_capsules = true
+Lua.mogicap_909 = KITEM_JAWZ,1
+Lua.mogicap_10 = KITEM_ORBINAUT,2
+
+Level RR_CloudtopDimension
+LevelName = Cloudtop
+ZoneTitle = Dimension
+Act = 4
+TypeOfLevel = Race
+NumLaps = 2
+SkyTexture = ~150
+Music = DIHEZ1
+Mobjscale = FRACUNIT*22/100
+LightContrast = 64
+LightAngle = 45
+SkyboxScaleZ = 4
+CameraHeight = 130
+Lua.mogi_capsules = true
+Lua.mogicap_800 = KITEM_LANDMINE,1
+Lua.mogicap_795 = KITEM_MINE,1
+
+Level RR_VermilionVessel
+LevelName = Vermilion Vessel
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = VVSKYNW
+Music = VEVEZ
+SkyboxScale = 32
+MobjScale = FRACUNIT/4
+LightAngle = 45
+LightContrast = 32
+Lua.mogi_capsules = true
+Lua.mogicap_LANDMINE = KITEM_SUPERRING,2
+
+Level RR_CoastalTemple
+LevelName = Coastal Temple
+TypeofLevel = Race
+NumLaps = 3
+SkyTexture = CTSKY
+Music = COTEZ
+MobjScale = FRACUNIT/4
+Darkness = -0.25
+Lua.mogi_capsules = true
+Lua.mogicap_1164 = KITEM_JAWZ,1
+
+Level RR_MegaFlyingBattery
+LevelName = Mega Flying Battery
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = ~171
+Music = MEFLZ
+Mobjscale = FRACUNIT/4
+Weather = PRECIP_STORM
+DefaultWaypointRadius = 64*FRACUNIT
+CameraHeight = 140
+Lua.mogi_capsules = true
+Lua.mogicap_479 = KCAPSULE_RING,2
+Lua.mogicap_478 = KITEM_BANANA,1
+Lua.mogicap_477 = KCAPSULE_RING,6
+
+Level RR_LavenderShrine
+LevelName = Lavender Shrine
+TypeOfLevel = Race
+NumLaps = 3
+MobjScale = FRACUNIT/4
+Music = LASHZ
+SkyTexture = BSZSKY2
+DefaultWaypointRadius = 208*FRACUNIT
+SkyboxScale = 4
+Weather = PRECIP_LSPT
+Darkness = -1
+Lua.mogi_capsules = true
+Lua.mogicap_465 = KITEM_ORBINAUT,2
+
+Level RR_BlizzardPeaksClassic
+LevelName = Blizzard Peaks
+ZoneTitle = Classic
+Music = BLCAZ
+TypeOfLevel = RACE
+Hidden = False
+SkyTexture = SKY55
+NumLaps = 3
+Weather = PRECIP_SNOW
+SubtractNum = True
+LightAngle = 45
+LightContrast = 98
+Lua.mogi_capsules = true
+Lua.mogicap_banana = KITEM_BANANA,1
+
+Level RR_LaunchBaseClassic
+LevelName = Launch Base
+ZoneTitle = Classic
+TypeOfLevel = Race
+NumLaps = 3
+SkyTexture = SKY6633
+Music = LABAZ2
+Lua.mogi_capsules = true
+Lua.mogicap_1548 = KITEM_JAWZ,1
+
+Level RR_LavenderShrineClassic
+LevelName = Lavender Shrine
+ZoneTitle = Classic
+TypeOfLevel = Race
+NumLaps = 2
+MobjScale = FRACUNIT/4
+Music = LASHZ
+SkyTexture = BSZSKY
+DefaultWaypointRadius = 208*FRACUNIT
+SkyboxScale = 10
+Palette = 7682
+Darkness = -1
+Lua.mogi_capsules = true
+Lua.mogicap_834 = KITEM_JAWZ,1
+
+#wave 4 i think i hate this
+
+Level RR_AngelIsland
+LevelName = Angel Island
+Skytexture = AIZSKY
+TypeOfLevel = Race
+NumLaps = 3
+Music = ANISZ,ANISZ1,ANISZ2
+Mobjscale = FRACUNIT/4
+SkyboxScaleZ = 8
+Lua.mogi_capsules = true
+Lua.mogicap_674 = KITEM_JAWZ,1

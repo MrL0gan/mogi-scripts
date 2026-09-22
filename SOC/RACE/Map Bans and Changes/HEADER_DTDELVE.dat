@@ -1,0 +1,129 @@
+Level DIG_BurningBone
+LevelName = Burning Bone
+TypeofLevel = Race
+NumLaps = 6
+SkyTexture = PIT
+Music = BONEZA
+MobjScale = FRACUNIT*30/100
+LightAngle = 135
+LightContrast = 64
+NoComms = true
+Hidden = True
+Lua.usesdigglesaves = true
+
+Level DIG_BotanicBase
+LevelName = Botanic Base
+TypeofLevel = Race
+NumLaps = 3
+SkyTexture = PIT
+Music = DIGBOT
+MobjScale = FRACUNIT*25/100
+Followers = Burboom,Bushbubble
+LightAngle = 0
+LightContrast = 32
+Hidden = True
+Lua.usesdigglesaves = true
+
+Level DIG_LavaReef
+LevelName = Lava Reef
+TypeofLevel = Race
+NumLaps = 2
+SkyTexture = PIT
+Music = DIGREF
+MobjScale = FRACUNIT*25/100
+Hidden = True
+Lua.usesdigglesaves = true
+
+Level DIG_BubblinSprings
+LevelName = Bubblin Springs
+TypeofLevel = Race
+NumLaps = 2
+Music = BUBLIN
+NoZone = true
+SkyTexture = ~000
+MobjScale = FRACUNIT*25/100
+LightContrast = 4
+LightAngle = 20
+SkyboxScale = 8
+Hidden = True
+
+Level DIG_LaeauLaile
+LevelName = Planet Laeau
+ZoneTitle = Laile
+TypeofLevel = Race
+NumLaps = 3
+Music = MAPXXM
+SkyTexture = XXXXSKY
+PositionMusic = XEXINT
+LightAngle = 0
+LightContrast = 48
+MobjScale = FRACUNIT*25/100
+Hidden = True
+
+Level DIG_MikuFest
+LevelName = Miku Festival
+Act = 1
+NoZone = true
+TypeofLevel = Race
+NumLaps = 3
+SkyTexture = PIT
+Music = WSMIKU
+MobjScale = FRACUNIT*25/100
+LightContrast = 16
+Weather = PRECIP_SPARKLES
+Hidden = True
+
+Level DIG_RegalRaceway
+LevelName = Sunken Sovereign
+TypeofLevel = Race
+NumLaps = 2
+SkyTexture = ~029
+Music = REGSHP
+Weather = PRECIP_STORM
+MobjScale = FRACUNIT*25/100
+SkyboxScale = 4
+Hidden = True
+
+Level DIG_Citadel
+LevelName = Icebound Citadel
+TypeofLevel = Race
+SkyboxScale = 4
+SkyTexture = CITASKY
+NoZone = true
+Act = 1
+NumLaps = 1
+MobjScale = FRACUNIT*25/100
+SectionRace = True
+Music = ICCCIT
+LightContrast = 64
+Followers = Spikebonker
+Hidden = True
+
+Level DIG_STORY0
+LevelName = Floor B1
+NoZone = true
+TypeOfLevel = 0
+NoVisitNeeded = true
+SkyTexture = SPSSKY03
+NumLaps = 1
+Music = DGSTR1
+AssociatedMusic = DGSTR0
+MobjScale = FRACUNIT/4
+LightAngle = 90
+LightContrast = 20
+NoComms = true
+Hidden = True
+Lua.usesdigglesaves = true
+Lua.rdtlstorymap = true
+
+Level DIG_RobotTumbler
+LevelName = DIGGLE'S
+ZoneTitle = BOT TUMBLER
+SectionRace = true
+TypeofLevel = Race
+NumLaps = 1
+Music = NERSZ
+SkyTexture = CSBSKY01
+SkyboxScaleZ = 0
+MobjScale = FRACUNIT*25/100
+Hidden = True
