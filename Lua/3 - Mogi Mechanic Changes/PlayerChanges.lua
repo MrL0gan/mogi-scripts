@@ -89,6 +89,16 @@ local function gradingFactorBaseRingAwardIncrease(player)
 	end
 end
 
+---Clears the marked for death state on players who are not in a damaged state anymore.
+---This would remain active whenever a player bailed, got damaged and immediately entered
+---a non-tumble damage state. Preventing them from interacting with other objects.
+---@param player player_t
+local function patchDeathMark(player)
+	if player.markedfordeath and not P_PlayerInPain(player)
+		player.markedfordeath = false
+	end
+end
+
 ---Runs player modifying functions.
 ---@param player player_t
 local function playerThink(player)
@@ -97,6 +107,7 @@ local function playerThink(player)
 
 	turbineIntangibility(player)
 	gradingFactorBaseRingAwardIncrease(player)
+	patchDeathMark(player)
 end
 
 addHook("TouchSpecial", loopIntangibility, MT_LOOPENDPOINT)
