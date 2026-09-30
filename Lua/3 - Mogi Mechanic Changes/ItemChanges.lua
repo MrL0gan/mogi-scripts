@@ -147,7 +147,8 @@ local function getProjectileSpeedCap(player)
 		distance = min($, others.distancetofinish)
 	end
 
-	distance = player.distancetofinish - $
+	---Compare the distance unscaled by `mapobjectscale`.
+	distance = fixdiv(player.distancetofinish, mapobjectscale) - fixdiv($, mapobjectscale)
 	if distance == 0
 		return PROJECTILESPEEDCAP_MAXSPEED
 	end
