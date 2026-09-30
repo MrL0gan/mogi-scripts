@@ -40,6 +40,11 @@ addHook('MobjThinker', function(origin)
 		origin.extra_hitbox_state = HITBOX_INHERIT
 		return
 	end
+	---Do not spawn extra hitboxes for an object that is meant to become a item monitor spawner. --GlowingTail
+	if origin.spawnpoint and (gametyperules & GTR_PAPERITEMS) and not K_Cooperative()
+		origin.extra_hitbox_state = HITBOX_INHERIT
+		return
+	end
 	local map_radius = fixmul(mobjinfo[MT_RANDOMITEM].radius, fixmul(origin.spawnpoint.scale, mapobjectscale) * 3)
 	local hbox_radius = min(map_radius / 2, 64*FU)
 	spawn_hitbox(origin, 1, 1, hbox_radius)
@@ -53,6 +58,9 @@ end, MT_RANDOMITEM)
 
 addHook('TouchSpecial', function(special, toucher)
 	local box = special.target
+	if not (box and box.valid)
+		return
+	end
 	if box.extra_touch_mobj then
 		return true
 	end
