@@ -458,3 +458,73 @@ Music = MEAQZ
 Mobjscale = FRACUNIT*22/100
 CameraHeight = 140
 hidden = true
+
+Level RR_GreenTriangle
+LevelName = Green Triangle
+Music = GRTRZ
+NumLaps = 7
+SkyTexture = ~031
+TypeOfLevel = Race
+MobjScale = FRACUNIT/4
+hidden = true
+
+Level RR_CityEscape
+LevelName = City
+ZoneTitle = Escape
+TypeOfLevel = Race
+SectionRace = True
+NumLaps = 1
+SkyTexture = SKYCE
+PositionMusic = CITINT
+Music = CIESZ,SEV
+Mobjscale = FRACUNIT*29/100
+LightContrast = 64
+LightAngle = 45
+hidden = true
+
+Level RR_ShuffleSquare
+LevelName = Shuffle Square
+Palette = 0
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = SKY766
+Music = SHSQZ
+SkyboxScale = 0.25
+DefaultWaypointRadius = 768*FRACUNIT
+Mobjscale = FRACUNIT*90/100
+hidden = true
+
+Level RR_MegaBridge
+LevelName = Mega Bridge
+TypeOfLevel = Race
+NumLaps = 6
+SkyTexture = ~133
+Music = MEBRZ
+Mobjscale = FRACUNIT/4
+CameraHeight = 140
+hidden = true
+
+Level RR_EndlessMine
+LevelName = Endless Mine
+Act = 1
+TypeOfLevel = Race
+NumLaps = 5
+SkyTexture = EMZSKY01
+Music = ENMIZ
+MobjScale = FRACUNIT*16/100
+Darkness = -0.5
+DefaultWaypointRadius = 50*FRACUNIT
+LightContrast = 24
+LightAngle = 225
+hidden = true
+
+Level RR_CollisionChaos
+LevelName = Collision Chaos
+TypeOfLevel = Race
+SkyTexture = ~029
+Mobjscale = 1*FRACUNIT/4
+SkyboxScaleZ = 0
+NumLaps = 2
+Music = COCHZ,COCHA
+Darkness = 0.5
+hidden = true
